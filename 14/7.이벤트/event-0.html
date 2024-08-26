@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>load이벤트</title>
+<!-- 선언문의 위치는 아래의 <h1>안녕</h1> 위쪽에 작성됨 -->
+  <script>
+    // load 이벤트 : 웹브라우저 창이 event-0.html 웹문서 내부에 작성된 모든 HTML태그들을 읽어 들인 이벤트(동작)
+    //load이벤트를 웹브라우저 창역할(window객체)에 등록
+    //이벤트를 처리할 이벤트핸들러 함수와 연결
+    window.onload = function(){
+      //이벤트 처리 코드 작성 할 공간
+      //h1 요소를 선택해서 가져와 글자 색상을 빨강으로 설정
+      document.querySelector("h1").style.color = "red";
+
+    };
+
+    
+  </script>
+</head>
+<body>
+  <h1>안녕</h1>
+
+</body>
+</html>

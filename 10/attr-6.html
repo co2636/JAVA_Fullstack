@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>속성선택자6</title>
+    <!-- 
+    CSS 고급 선택자 종류 중에서  [속성명 $= 값] 선택자
+    - 이 선택자는 속성에 대한 값으로 끝나는 단어가 있는 특정요소를 선택하는 선택자
+
+  -->
+
+    <style>
+      ul {
+        list-style: square;
+      }
+      li a {
+        line-height: 30px;
+        font-size: 14px;
+        color: blue;
+        text-decoration: none;
+      }
+      /* [속성 $= 값] */
+      [href$="hwp"] {
+        background: url("./images/hwp_icon.gif") center right no-repeat;
+        padding-right: 25px;
+      }
+
+      a[href$="xls"] {
+        background-image: url("./images/excel_icon.gif");
+        background-repeat: no-repeat;
+        background-position: center right;
+        padding-right: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>회사 소개 파일 다운받기</h3>
+    <ul>
+      <li><a href="./intro.hwp">hwp 파일</a></li>
+      <li><a href="./intro.xls">엑셀 파일</a></li>
+    </ul>
+  </body>
+</html>

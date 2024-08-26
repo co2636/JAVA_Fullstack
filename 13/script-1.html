@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>내부 스크립트 파일</title>
+  </head>
+  <body>
+    <h1 id="heading">자바스크립트</h1>
+    <p id="text">위 텍스트를 클릭해 보세요</p>
+
+    <!-- 자바스크립트의 선언문 -->
+    <script>
+      // 위 작성해 놓은 id가 heading인 <h1>한쌍을 선택해서 heading 변수메모리에 저장
+      var heading = document.querySelector("#heading");
+
+      // h1 한쌍에 사용자가 클릭하는 행동 하나를 등록
+      heading.onclick = function () {
+        // h1 한쌍에 내부에 적힌 글자 색상을 빨간색으로 설정
+        heading.style.color = "red";
+      };
+    </script>
+  </body>
+</html>

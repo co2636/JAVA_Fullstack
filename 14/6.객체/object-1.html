@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>객체</title>
+</head>
+<body>
+  <script>
+    /*
+      주제1. 사용자 정의 객체 만들기
+
+        - 객체는 여러개의 키:값 형태를 가지고 있다. 키를 속성 또는 프로퍼티 라고도 부른다.
+
+        - 객체 메모리 생성하는 문법
+          const 객체명(변수) = { 키1:값1, 키2:값2, 키3:값3, ...... }
+
+
+
+    */
+
+    const book1 = {
+                    title : "웹 표준의 정석",
+                    pages : 648,
+
+                  }
+
+
+
+
+
+    /*
+      주제2. 객체의 키(속성,프로퍼티)의 값을 얻거나 변경하는 방법
+            
+            방법1. .표기법 이용
+          
+
+            방법2. [] 괄호 표기법 이용
+    
+    */
+
+    //방법1. 객체명.키  ->  객체{} 내부에 저장된 키에 대응되는 값을 가져온다.
+    console.log(book1.title); //"웹 표준의 정석"
+    //방법1. 객체명.키 = 변결할 값 -> 객체{}내부에 저장된 키에 대응되는 값 변경
+    book1.title = "웹표준의 정석2"
+    console.log(book1); // {title: '웹표준의 정석2', pages: 648}
+
+    //방법2. 객체명["키"] -> 객체{} 내부에 저장된 키에 대응되는 값 가져오기
+    console.log(book1["title"]);
+
+    //방법2. 객체명["키"] = 변경할 값; -> 객체{} 내부에 저장된 키에 대응되는 값 변경
+    book1["title"] = '웹 표준의 정석';
+    console.log(book1);
+
+
+    /*
+       주제3. 키 : 값 쌍이 없는 비어있는 객체를 샌성하고 키 :값 추가하기
+       
+    */
+
+    let book2 = {}
+    // let book2 = new Object();
+
+    //비어 있는 객체에 키:값 한쌍씩 넣으면 객체를 수정할 수 있다.
+    book2.title = "Javascript";
+    book2.pages = 500; // {title : "javascript", pges:500}
+
+    book2.author = "김개똥";
+    //{title : "javascript", pges:500, author:"김개똥"}
+
+    console.log(book2);
+    //현재 boo2 = {title : "javascript", pges:500, author:"김개똥"}
+
+
+    /*
+      주제4. 객체 내부에 만들어져 있는 키:값 삭제하기
+
+      삭제문법
+             delete 객체명.키
+    */
+      
+    delete book2.pages;
+    console.log(book2);
+    //{title: 'Javascript', author: '김개똥'}
+
+    delete book2.author
+    console.log(book2); //{title: 'Javascript'}
+
+    // book2.author = undefined; //{title: 'Javascript', author: undefined}
+    // console.log(book2);
+
+
+    /*
+      주제5. 객체 중첩하기(객체안에 또 다른 객체를 넣을 수 있다.)
+    
+    */
+
+   let student = {
+                  name:"Doremi",
+                  score:{
+                          history:85,
+                          science:94,
+                          average: function(){
+                                      return (this.history + this.science)/2;
+                                    }
+
+                        },
+
+                }
+
+    console.log( student.score.history);
+
+    console.log( student.score.average());
+
+    
+</script>
+</body>
+</html>

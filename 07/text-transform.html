@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>대소문자 변환</title>
+  <style>
+    p{
+      font-size: 50px;
+    }
+    .trans1{
+      /* 선택한 p요소 사이에 있는 텍스트의 첫문자만 대문자로 변경 */
+      text-transform: capitalize;
+    }
+    .trans2{
+      /* 선택한 p요소 사이에 있는 텍스트의 모든 문자가 소문자이면! 모두 대문자로 변경 */
+      text-transform: uppercase;
+    }
+    .trans3{
+      /* 선택한 p요소 사이에 있는 텍스트의 모든 문자가 대문자이면! 모두 소문자로 변경 
+          단! 모두 소문자이면 그대로 둔다.*/
+      text-transform: lowercase;
+    }
+  </style>
+</head>
+<body>
+  <p class="trans1">html</p>
+  <p class="trans2">css</p>
+  <p class="trans3">JAVASCRIPT</p>
+</body>
+</html>

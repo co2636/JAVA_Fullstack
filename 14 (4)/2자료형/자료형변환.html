@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+      자료형변환 
+      방법1. 묵시적 형 변환(자동 형 변환)
+      방법2. 명시적 형 변환(강제 형 변환)
+  -->
+    <script>
+      //방법1. 묵시적 형변환 형태 알아보기
+
+      let number = 10; // 10은 숫자형(number)-정수
+      let string = "20"; // "20"은 문자열형(string) - 문자열
+
+      // 10   +  "20"
+      //순서1. 10이 묵시적형변환에 의해 문자열 "10"으로 변환됩니다.
+      //순서2. +을이용해 "20"과 합칩니다.
+      //순서3. 결과 "1020" 하나의 문자열이 만들어집니다.
+      const result = number + string;
+      document.write(result); //"1020"
+      document.write("<br>");
+
+      //순서1. 숫자10을 문자열 "10"으로 묵시적형변환합니다
+      //순서2. 문자열"20" 과 문자열"10"을 + 합칩니다.
+      //순서3. 결과 "2010" 하나의 문자열이 만들어집니다.
+      document.write("20" + 10); //"2010"
+
+      document.write("<br>------------------<br>");
+
+      //방법2. 명시적 형 변환(강제 형 변환)
+
+      //참고. 자바스크립트 문법에서 제공하는
+      //      Number라는 이름의 함수 가 있습니다.
+      //      기능 : 숫자형태로 된 문자열을 Number함수에게
+      //             전달하면 숫자만 추출해서 정수로 반환
+      //      사용법
+      //      Number(숫자형태로된 문자열 집어넣기);
+      //      예
+      //      Number("100");  -> 100변환해서 제공!
+      let strA = "10";
+      let strB = "10개";
+
+      //함수 Number는 자바스크립트가 기본적으로 제공하는 내장함수라서
+      //숫자가 아닌 문자를 포함한 전체 문자열을 집어 넣으면
+      //숫자로 명시적 형변환이 일어나지 않기때문에
+      //NaN이라는 값을 되돌려 줍니다.
+      let numB = Number(strB);
+      document.write(numB, "<br>");
+
+      // Number(변수명 또는 문자열형태의값);
+      let numA = Number(strA);
+      //Number("10");
+      //해석 : 문자열"10"을 집어 넣으면
+      //       숫자 10으로 강제로 변환해서
+      //       숫자 10을 되돌려 받을수 있다.
+      //   =    10;
+      document.write(numA, "<br>");
+      document.write(typeof numA); //number 숫자형
+      document.write("<br>");
+      /*
+        만약 숫자뿐만아니라 문자도 전체문자열에 포함되어 있으면
+        문자열을 숫자로 변환해야 합니다.
+        그럴때는 parseInt라는 이름의 함수를 사용하면 된다.
+
+        사용법
+              parseInt(숫자가포함된문자열, 숫자로변환할_값);
+              paserInt("이놈10요놈", 10);  -> 10을 추출해서 숫자로 제공해줌
+      */
+      let strC = "10";
+      let strD = "10개";
+
+      let resultC = parseInt(strC, 10);
+      document.write(resultC, "<br>");
+      document.write(typeof resultC, "<br>");
+
+      let resultD = parseInt(strD, 10);
+      document.write(resultD, "<br>");
+      document.write(typeof resultD, "<br>");
+
+      //만약 문자열이 숫자로 시작한 전체 문자열이라면?
+      //parseInt함수는 숫자만 반환해줍니다.
+      let str = parseInt("123안녕");
+      document.write(str, "<br>");
+
+      //만약 숫자가 포함된 문자열이라 하더라도
+      //문자로 시작하거나,
+      //아님 숫자를 포함하지 않은 문자열의 경우
+      //NaN으로 반환합니다.
+      let str2 = parseInt("안녕123");
+      document.write(str2, "<br>");
+
+      let str3 = parseInt("dkdkdkdk");
+      document.write(str3);
+      /*
+          parseInt함수 
+          - 문자열을 파싱하여 정수로 변환하는 자바스크립에 내장함수 종류중하나
+          - 이함수는 전달하는값(인수)이 2개 
+            문자열, 진수
+          - parseInt(변환할문자열, 2에서 36사이의 정수)
+          - 반환값 -> 정수
+          -           변환할수 없는 경우 : NaN 반환
+      */
+      //---------------------
+      // 숫자형을 문자열로 명시적 형변환
+      // String함수 사용!
+      // 문법
+      //      String(문자열로변환할숫자);
+      let num = 2022;
+      let str4 = String(num);
+      // 2022 -> "2022" 문자열로 변환해서 반환해줍니다.
+
+      document.write(str4, "<br>"); //"2022"
+      document.write(typeof str4); //string
+
+      let varA;
+      let varB = null;
+      let varC = true;
+
+      let str5 = String(varA);
+      document.write("<br>", str5); //"undefined"
+
+      let str6 = String(varB);
+      document.write("<br>", str6); //"null"
+
+      let str7 = String(varC); // true -> "true"
+      document.write("<br>", str7);
+
+      //----------------
+
+      //논리값(Boolean형)으로 명시적 형변환
+      //- 논리값으로 변환하는 내장 함수로는 Boolean함수가 있습니다
+
+      // Boolean("하이"); -> true
+      // Boolean(0);  -> false
+      // Bollean("") -> false
+
+
+
+
+
+    </script>
+  </body>
+</html>

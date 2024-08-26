@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>고급 선택자(+)</title>
+    <!-- 
+        CSS고급 선택자 종류 중에서 + 인접형제(다음)선택자
+        - 형제요소중에서 첫번째 동생 요소만 선택하는 선택자
+        - 기본 문법
+                    형요소먼저선택 + 최종선택해올동생요소선택{ 스타일정의; }                                                 
+    -->
+    <style>
+      h1 + p {
+        background-color: #222;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1>예약 방법 & 사용요금</h1>
+      <p>아직 온라인 예약 신청이....</p>
+      <p>가족실 (2~4인) : 60,000원/일</p>
+      <p>도미토리(4인공용) : 25,000원/일</p>
+    </section>
+  </body>
+</html>

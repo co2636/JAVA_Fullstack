@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>속성선택자3</title>
+    <!-- 
+      CSS 고급 선택자 종류중에서 [속성명 ~= 값] 선택자 
+
+      - 여러 속성값 중에서 해당 속성값이 포함된 요소를 최종 선택하는 선택자.
+      - 이 선택자는 속성이 하나면서 속성값이 여러개일때 특정 속성값을 찾는데 편리함
+        예를 들어     [class ~= button]{ 스타일 정의; }
+                해석 : class속성에 대한 값 중에서 button단어가 포함되어있는 요소만 최종선택
+
+
+    
+    -->
+    <style>
+      /* ul 요소를 선택해서 가져와 모든 li요소들 블릿기호 없애기 */
+      ul {
+        list-style: none;
+      }
+
+      /* 
+          모든 li요소들을 한번에 선택해서 가져와 
+          인라인 레벨요소이면 블록레벨요소로 사용하되 
+          모든 li요소들의 바깥오른쪽 여백을 10px만큼 띄우자
+        */
+      li {
+        display: inline-block;
+        margin-right: 10px;
+      }
+
+      /* 
+          모든 li요소들을 먼저 선택해오고, li요소들의 하위 모든 a요소들을 한반에 선택해 와서 
+          모든 a요소들의 안쪽여백을 위아래 5px 띄우고, 좌우 20px만큼 띄운다.
+          모든 a요소들 사이에 작성된 텍스트의 글자 크기를 14px로 설정하고 
+          글자 색상을 파란색으로 적용
+          또한 모든 밑줄 제거.
+
+        */
+      li a {
+        padding: 5px 20px;
+        font-size: 14px;
+        color: blue;
+        text-decoration: none;
+      }
+      /* 
+          class속성애 대한 클래스값(명)이 flat인 a요소들만 최종선택해서 가져와
+          배경색을 #eee로 설정
+          바깥테두리 선의 굵기 값을 1px로 가는 실선 선색상은 #222로 설정
+    
+        */
+
+      .flat {
+        background: #eee;
+        border: 1px solid #222;
+      }
+      /* [속성 ~= 값]{  } */
+      /* 
+        모든 a요소들 중에서 []대괄호 안에 작성된 class속성에 대한 클래스명(값)이 
+         button이라는 문자열을 포함한 a요소들을 최종선택해서 가져와 스타일 정의 */
+      a[class~="button"] {
+        border: 1px solid red;
+        border-radius: 5px;
+        box-shadow: 4px 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><a href="#" class="flat">메뉴 1</a></li>
+      <li><a href="#" class="flat">메뉴 2</a></li>
+      <li><a href="#" class="button">메뉴 3</a></li>
+      <li><a href="#" class="flat button">메뉴 4</a></li>
+    </ul>
+  </body>
+</html>

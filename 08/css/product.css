@@ -1,0 +1,29 @@
+table, th, td {
+  border:1px solid #ccc;
+  border-collapse: collapse;
+}
+th, td { 
+  padding:10px 20px; 
+}
+#container{
+  width: 600px;
+  margin: 0 auto;
+  border: none;
+}
+div{
+  border: 1px dotted #222;
+  padding: 20px;
+  margin: 20px;
+}
+#description{
+  /* 왼쪽 위 모서리 라운딩 */
+  border-top-left-radius: 30px;
+  /* 오른쪽 위 모서리 라운딩 */
+  border-top-right-radius: 30px; 
+}
+#package{
+  /* 왼쪽 아래 모서리 라운딩 */
+  border-bottom-left-radius: 30px;
+  /* 오른쪽 아래 모서리 라운딩 */
+  border-bottom-right-radius: 30px;
+}

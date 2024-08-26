@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>그리드 레이아웃</title>
+  <style>
+    /* 
+      CSS 그리드 레이아웃 사용!
+      - 웹 페이지에서 2차원 방식으로 레이아웃을 설계할 수 있도록 고안된 스타일 속성 정의 방법이다.
+        여기서 2차원이란 가로(row)와 세로(column)를 같이 사용해 레이아웃을 설계하는 방식 이다.
+
+      - CSS 그리드 레이아웃 설계 방식을 사용하면 1차원 레이아웃을 설계하는 방식 
+        플렉스 박스 보다 더 폭넓게 레이아웃을 설계 할 수 있다.
+
+      CSS 그리드 레이아웃 설계시 구성 요소
+
+      - 행(row) : 그리드 레이아웃에서 가로줄 영역을 의미함
+      - 열(column) : 그리드 레이아웃에서 세로줄 영역을 의미함
+      - 그리드 셀 : 행과 열이 만나 이루어지는 하나의 공간을 나타냄
+      - 그리드 갭 : 그리드 셀과 그리드 셀 사이의 간격을 나타냄
+      - 그리드 항목(아이템) : 그리드 셀 안에 표현되는 콘텐츠를 의미함
+      - 그리드 라인 : 그리드 행과 열을 그리는 선을 의미함
+      - 그리드 넘버 : 그리드 라인에 붙는 번호
+      - 그리드 컨테이너 : 그리드 레이아웃의 전체 내용을 담고 있는 최상위 부모요소이다.
+      - 
+
+
+    */
+    /* 단순히 초기 레이아웃을 보여주기 위한 기본 스타일들  */
+    .grid-item{
+      background-color:  #ff5252;
+      color: white;
+
+    }
+
+    .grid-item:nth-child(2n){
+      background-color: #bf5e5e;
+
+    }
+
+    /* 그리드 컨테이너 설정 */
+    .grid-container{
+      /* 
+        display속성
+        - 부모요소를 그리드 컨테이너로 설정하고, 부모요소 내부에 배치되는 자식요소(그리드 아이템)들을 
+          블록레벨요소의 성격으로 배치 할 것인지 
+          인라인레벨요소의 성격으로 배치 할것인지 결정하는 값 2개를 가지고 있는 속성
+          
+        - 값은 grid 또는 line-grid 중 하나
+        - grid : 블록레벨요소로 배치
+          line-grid : 인라인레벨요소로 배치
+      */
+
+      /* 해당 속성이 지정된 요소는 그리드 컨테이너가 되고, 자식요소들을 그리드 아이템(항목)이 됩니다. */
+      display: grid;
+
+      /* 
+        grid-template-columns속성과 grid-template-row속성
+        - 그리드 컨테이너의 기본 구성요소는 행과 열이다.
+          따라서 행과 열을 생성하고, 행과 열을 지정해 그리드 셀을 생성해야 한다.
+          열은 grid-template-columns속성으로
+          행은 grid-template-rows속성으로 생성한다.
+
+        - 형식
+                grid-template-columns : 1열값 2열값 ...;
+                grid-template-rows : 1행값 2행값  ...;
+                
+                속성값은 공백으로 구분해 순서대로 작성하는데, 앞에서 부터 1행 또는 1열의 값이 된다.
+
+      */
+  /* 
+   auto값을 지정하면 해당하는 행과 열의 크기가 그리드 컨테이너에 맞춰 자동으로 지정된다.
+   따라서 2열의 너비가 그리드 컨테이너에 맞춰진다.
+  */
+ /* CSS 그리드 컨테이너의 첫번째 열은 100px로, 두 번째 열은 남은 공간을 자동으로 채우게 됨. */
+      /* grid-template-columns: 100px auto;  */
+/* CSS 그리드 컨테이너의 첫번째 행은 100px로, 두 번째 행도 100px로 설정됨 */
+      /* grid-template-rows: 100px 100px; */
+      
+/* CSS 그리드 컨테이너의 두개의 열의 높이를 각각 100px로 설정!  */
+                                  /* 100px 100px */
+      /* grid-template-columns: repeat(2, 100px);  */
+
+/* CSS 그리드 컨테이너의 두개의 행의 너비를 각각 50px로 설정  */
+                                /* 50px  50px*/
+      /* grid-template-rows: repeat(2, 50px);  */
+                            
+      /* minmax()함수로 열 또는 행 크기의 최솟값과 최대값을 지정할 수도 있다. */
+                            /* (최소 10px ~ 최대100px) 100px  */
+      /* CSS 그리드 컨테이너 안에 만들어지는 열의 너비값을 지정하는 속성으로 
+         첫 번째 열은 최소 10px에서 최대 100px까지의 범위의 너비를 가질수 있고,
+         두 번째 열은 고정된 100px의 너비를 갖게 설정
+      */
+      /* grid-template-columns: minmax(10px, 100px) 100px; */
+                            /* (최소 10px ~ 최대 50px) 50px */
+      /* 첫 번째 행은 최소 10px에서 최대 50px까지의 높이를 가지며,
+         두 번째 행은 고정된 50px 높이를 갖게 설정
+      */
+
+      /* grid-template-rows: minmax(10px 50px) 50px; */
+      
+        /* 또는 두 함수를 함께 사용해서 값을 설정 할 수도 있다. */
+                              /* 두 개의 각 열은 최소 50px에서 최대 100px까지의 너비를 가지게 설정 */
+        grid-template-columns: repeat(2, minmax(50px, 100px));
+
+        /* 두 개의 각 행은 높이가 최소 10px에서 최대 50px까지 높이를 가지게 설정 */
+        grid-template-rows: repeat(2, minmax(10px, 50px));
+
+      /* 
+        row-gap 속성과 column-gap 속성
+        - 갭은 행과 열이 만나서 이루어지는 그리드 셀과 그리드셀 사이의 간격인데, 
+          행과 행사이의 간격은 row-gap속성에 대한 값을 이용해 설정하고, 
+          열과 열사이의 간격은 column-gap속성에 대한 값으로 설정한다.
+
+        - 형식
+                row-gap: 크기;
+                column-gap: 크기;
+
+
+
+      */
+
+      row-gap: 10px;
+      column-gap: 20px;
+
+      /* 
+        그리드 아이템(항목)들을 정렬하는 속성
+
+        align-items 속성과 align-self 속성
+        - align-items속성에 대한 값을 설정하면 그리드 셀의 높이가 그리드 아이템보다 클 때 
+          그리드 아이템을 각 그리드 셀의 세로 방향으로 정렬할 수 있다.
+
+        - align-items속성에 대한 값의 종류
+          
+          stretch        그리드 아이템이 그리드 셀을 꽉 채우도록 크기를 늘리는 값
+          
+          start          그리드 아이템을 그리드 셀위 맨위에 배치 정렬함
+
+          center         그리드 아이템을 그리드 셀의 세로방향 중앙에 배치 정렬함
+
+          end            그리드 아이템을 그리드 셀 가장 아래쪽에 배치 정렬함
+
+          
+
+      */
+
+      /* align-items: stretch; */
+
+      /* 
+        justify-items속성
+        - 그리드 아이템을 각 그리드 셀의 가로 방향으로 정렬하는 속성
+        - 사용할 수 있는 값은 align-items속성에 설정됐던 값들과 같고 방향만 다르다.
+
+          속성값 종류
+
+          stretch         그리드 아이템을 그리드셀에 꽉차도록 늘리는 값 
+          start           그리드 아이템을 그리드 셀의 왼쪽 끝에 배치하는 값
+          center          그리드 아이템을 그리드 셀의 가로 방향 중간에 배치하는 값
+          end             그리드 아이템을 그리드 셀의 오른쪽 끝에 배치하는 값
+
+      */
+
+      /* justify-items: stretch; */
+
+
+
+
+      /* 
+        place-items 속성
+        - 이 속성은 align-items 속성과 justify-items 속성 값을 한 줄에 한꺼번에 설정해주는 속성
+        - 형식
+              place-items: align-items속성의값 justify-items속성의값;
+
+
+        place-self 속성
+        - 이 속성은 align-self 속성과 justify-self속성값을 한줄에 한꺼번에 설정할수 있는 속성
+        - 형식
+              place-self : align-self 속성의 값 justify-self 속성의 값;
+
+      */
+
+      /* 그리드 아이템들을 셀의 수직 가운데 정렬하고 수평으로 오른쪽 끝에 정렬 */
+      /* place-items: center end; */
+
+      /* 그리드 아이템들을 각각의 셀의 수직 가운데 정렬하고 수평으로 오른쪽 끝에 정렬 */
+      place-self: center end;
+
+      /* 
+        place-items 속성은 그리드 컨테이너 내부에 작성된 모든 그리드 아이템들에 대한 정렬을 설정하는 속성이고 
+        place-self 속성은 개별 그리드 아이템에 대해 정렬을 설정하는 속성. 즉, 특정 그리드 아이템에 대한 정렬을 지정할 때 사용함.
+
+        
+
+      */
+
+
+    }
+
+
+  </style>
+
+
+</head>
+<body>
+  <!-- 그리드 컨테이너(부모요소) -->
+   <div class="grid-container">
+      <!-- 그리드 항목(아이템)  -->
+    <div class="grid-item">item-1</div>
+    <div class="grid-item">item-2</div>
+    <div class="grid-item">item-3</div>
+    <div class="grid-item">item-4</div>
+
+
+   </div>
+</body>
+</html>

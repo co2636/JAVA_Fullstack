@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>원래 크기의 이미지</p>
+    <!-- . 은 현재 파일이 저장된 위치를 의미함 -->
+    <img src="./images/salad.jpg" alt="레드향">
+
+    <p>width="50%", height="50%"로 지정한 이미지</p>
+    <!-- <body> 가 100%라 했을때 그 절반을 나타냄 -->
+    <img src="images/salad.jpg" width="50%">
+
+    <p>width="150px"으로 지정한 이미지</p>
+    <!-- ..은 한 단계 상위 폴더로 이동한다. 현재 04폴더니까 sources 폴더로 이동함 -->
+    <img src="../04/images/salad.jpg" width="150">
+</body>
+</html>

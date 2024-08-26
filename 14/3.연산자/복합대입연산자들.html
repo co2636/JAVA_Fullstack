@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>복합대입연산자들</title>
+  </head>
+  <body>
+    <script>
+      let number = 10;
+      // number변수에 저장된 10을 20으로 만들어 저장시키려면?
+      // number = 20; 을 저장하면 된다.
+
+      // number변수에 저장된 10에 +10을 해서 20으로 만든 뒤 20을 number변수에 다시 저장하려면?
+      number = number + 10;
+      //           10 + 10;
+      //              20;
+
+      // 연산순서1. number + 10 먼저 계산해서 20을 만들어준다.
+      // 연산순서2. 만든 20을 = 대입연산자를 이용해 number변수에 대입해서 저장
+
+      number += 10; // number = number + 10;
+      // 순서1. number변수에 저장된 20에다가 + 10을 하여 30으로 만들어 준다.
+      // 순서2. 만든 30을 = 기호를 사용해서 앞에 작성한 number 변수에 대입해서 저장한다.
+      document.write(number, "<br>"); // 30
+
+      // 현재 number변수에 저장된 값은 30
+
+      number -= 10; // number = number - 10;
+      // 순서1. number - 10
+      //           30  - 10  -> 20
+      // 순서2. = 대입연산자 기호가 작동해서 앞에 작성한 number변수에 20을 투입해서 저장
+      //        number = 20
+      document.write(number, "<br>");
+
+      // 현재 number변수에 저장된 값은? 20
+
+      number = number * 10; // number *= 10;
+      // 20  =   20   * 10;
+      // 20  =      200;
+      // 200
+
+      document.write(number, "<br>");
+
+      // 현재 number변수에 저장된 값은? 200
+
+      number /= 10; // number = number / 10;
+      // 200 = 200 / 10;
+      // 200 =    20;
+      // 20
+
+      document.write(number, "<br>");
+
+      // 현재 number변수에 저장된 값은? 20
+
+      number %= 10; // number  = number % 10;
+      // 20 %= 10;
+      // 20 = 20 % 10;
+      // 20 = 0
+      // 0
+
+      document.write(number, "<br>");
+      // 현재 number변수에 저장된 값은?  0
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select</title>
+</head>
+<body>
+  <h1>여러 데이터 나열하기</h1>
+  <form action="b.jsp">
+    <!-- 드롭다운 목록 -->
+    <label>상품선택</label>
+    <select name="f">
+      <option value="special_3" selected>선물용 3kg</option>
+      <option value="special_5">선물용 5kg</option>
+      <option value="family_3">가정용 3kg
+      <option value="family_5">가정용 5kg
+        <!-- html5 에서는 option 닫는 태그 생략 가능 -->
+    </select>
+    
+    <hr>
+
+    <!-- 데이터 목록 -->
+     <label>포장 여부</label>
+
+     <input type="text" list="pack" name="p" value="">
+
+     <datalist id="pack">
+        <option value="package">선물 포장</option>
+        <option value="no_package">포장 안함</option>
+     </datalist>
+
+     <button type="submit">전송</button>
+  </form>
+  
+</body>
+</html>

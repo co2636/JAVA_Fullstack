@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+	<style>
+		.parent{
+			background-color: lightblue;
+			padding: 30px;
+			position: relative;
+		}
+		
+		.child{
+			background-color: yellow;
+			padding: 30px;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="parent">
+		Parent
+		<div class="child">Child</div>
+	</div>
+	<script>
+		/*
+			주제 : mouseout와 mouseleave이벤트가 구조화된 요소에 어떻게 동작하는지 확인할수 있는 예제로
+			      <div class="parent">요소안에  <div class="child">요소가 만들어져 있고,
+			           두 요소에 각각의 이벤트 처리하여 보여주는 예제 입니다.	
+		*/
+		//mouseout 이벤트 등록
+			//부모 <div>
+			// $(".parent").on("mouseout", function(){ console.log("Parent mouseout"); });
+
+			// //자식 <div>
+			// $(".child").on("mouseout", function(){ console.log("Child mouseout"); });
+
+
+			//부모 <div>
+			$(".parent").on("mouseleave", function(){ console.log("Parent mouseleave"); });
+
+			//자식 <div>
+			$(".child").on("mouseleave", function(){ console.log("Child mouseleave"); });
+
+			/*
+				이 예제를 통해 mouseout에서는 버블링이 발생하여 하위 요소에서 상위요소로 이벤트처리 수행전파가 된다는 것을 확인할 수 있고
+				mouseleave에서는 버블링이 발생하지 않아 각 요소에서만 이벤트처리 수행됨
+			*/
+			
+
+
+
+
+	   
+	   
+	   
+	   
+	   
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+

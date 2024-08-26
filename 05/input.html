@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input tag</title>
+</head>
+<body>
+    <!-- 
+        <form></form> 태그 
+        - 입력한 정보를 서버페이지로 요청할 태그!
+        - action 속성 
+          : <form>태그 사이에 입력태그들에 의해 입력받은 데이터들을 요청할 서버페이지 주소를 작성하는 속성
+        - method 속성
+          : 입력받은 데이터들을 get 또는 post 전송방식으로 요청해서 전달하기 위해 전송방식 하나를 설정하는 속성
+    -->
+    <form action="main.jsp" method="get">
+        <input type="text"><br>
+
+        <input type="password"><br>
+
+        <input type="tel"><br>
+
+        <input type="url"><br>
+
+        <input type="search"><br>
+
+        <input type="email"><br>
+
+        <input type="checkbox">낚시
+        <input type="checkbox">독서
+        <br>
+
+        <input type="radio" name="gender">남자
+        <input type="radio" name="gender">여자
+        <br>
+
+        <input type="file"> 첨부할 파일 선택<br>
+
+        <input type="button" value="일반버튼"><br>
+
+        <input type="image" src="link.png" alt="link"><br>
+        
+        <input type="hidden" name="email" value="감춰서 전달할 값"><br>
+        
+        <input type="date"><br>
+        
+        <input type="datetime-local"><br>
+
+        <input type="month"><br>
+        
+        <input type="week"><br>
+        
+        <input type="time"><br>
+        
+        <input type="range"><br>
+        
+        <input type="color"><br>
+        <!-- form 태그 사이에 submit 태그는 하나만 사용가능 -->
+        <input type="submit" value="회원가입"><br>
+        
+        <input type="reset" value="모두삭제">
+        
+    </form>
+</body>
+</html>

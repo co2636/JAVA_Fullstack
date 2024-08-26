@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스타일 조작하기2</title>
+  <!-- CSS문법으로 미리 스타일 정의 해놓자 -->
+  <style>
+    .red-color{
+      color: red;
+
+    }
+    .fz20{
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <p id="text">text</p>
+
+  <script>
+    //<p id="text">text</p> 선택해서
+    const pEl = document.querySelector("#text");
+
+    // pEl.classList.add("red-color"); // <p id="text" class="red-color">text</p>
+
+    // pEl.classList.add("fz20"); // <p id="text" class="red-color fz20">text</p>
+
+    //한 줄을 작성해서 red-color와 fz20을 추가하는 방법
+    pEl.classList.add("red-color","fz20"); // <p id="text" class="red-color fz20">text</p>
+    
+    // 적용된 class속성에 대한 값을 삭제하고 싶을때 classlist속성의 remove()메소드를 사용하자
+
+    pEl.classList.remove("red-color","fz20"); // <p id="text" class>text</p>
+
+    //1초 간격으로 1초마다 toggle()메소드 반복 호출! 실행!
+      window.setInterval(function(){
+        pEl.classList.toggle("red-color");
+         // <p id="text" class>text</p> , // <p id="text" class="red-color">text</p> 2초마다 반복
+         // 만약 class = red-color속성값이 부여 되어 있으면 삭제
+         // 만약 class = red-color속성값이 부여 안되어 있으면 추가
+
+
+      },2000);
+
+
+
+
+    //참고. 자바스크립트 구문으로 class속성을 조작해서 스타일을 적용시킬수 있다.
+    //     선택한 요소노드에 class속성을 지정할 때 (추가, 삭제, 추가와 삭제 반복 할때) 
+    //     classList 속성의 add(), remove(), toggle()메소드 사용!
+    // 문법
+    //     요소선택.classList.add("class속성값"); // 추가
+    //     요소선택.classList.remove("삭제할 class속성에 대한 값"); // 삭제
+    //     요소선택.classList.toggle("없으면 추가할 class속성값 또는 있으면 삭제할 class속성값"); // 추가 또는 삭제
+    //
+    // pEl.classList.add("active"); //   <p id="text" class="active">text</p>
+
+  
+
+
+                //<p>text</p>
+    // const pEl = document.querySelector("p");
+
+    // pEl.style.color = "red"; //글자 색상 빨강
+
+    // pEl.style.fontSize = "20px"; // 글자 크기 20px
+
+    // pEl.style.fontWeight = "bold"; // 글자 굵기 굵게
+
+    // pEl.style.lineHeight = "1px"; // 줄간격
+
+    //style 속성으로 스타일을 조작하면 한 줄에 속성에 대한 값 설정을 따로따로 작성해야 해서 불편하다.
+
+
+
+
+
+  </script>
+</body>
+</html>

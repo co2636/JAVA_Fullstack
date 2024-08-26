@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>$.noConflict()</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- 충돌을 방지 하기 위한 외부 다른 라이브러리(.js)주소 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prototype/1.7.3/prototype.js"></script>
+  <!-- 
+    $.noConfilict() 메소드
+    - JQuery와 다른 라이브러리(.js파일)간의 충돌을 방지하기 위해 JQuery문법의 $ 기호를 해제하는데 사용되는 메소드
+      이 메소드를 호출하면 $기호가 다른 라이브러리에 의해 사용될수 있도록 반환됨
+    
+    - 문법
+          $.noConfilict();
+  
+  -->
+  <script>
+    //JQuery 문법의 $기호를 대신 jQuery단어를 사용해 다른 라이브러리와 
+    // 충돌하여 예상치 못한 동작이 발생하지 않도록 $.noConfilict(); 메소드 호출 후 사용하자
+      jQuery.noConflict();
+
+      jQuery(document).ready(function(){
+
+        jQuery("button").click(function(){
+
+          jQuery("p").text("버튼이 클릭되었습니다.");
+
+        });
+
+      });
+
+  </script>
+  
+</head>
+<body>
+  <button>클릭하세요</button>
+  <p>여기에 텍스트가 나타납니다.</p>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>switch문</title>
+  </head>
+  <body>
+    <script>
+      /*
+      문제 : 사이트 방문자에게 현재 몇월달인지 입력받습니다. 
+             입력받은 월에 따라 각각 다른 문장을 출력하는 예제
+    */
+
+      //순서1. 사이트 방문자에게 현재 월을 입력받아 mon변수에 저장
+      let mon = parseInt( prompt("현재 월을 입력하시오.", "0"), 10);
+
+      let message; // 계절 메시지를 저장할 변수 선언
+
+      //순서2. 입력받은 월에 따라 각각 다른 문장을 출력시킴
+    
+      switch (true) { // switch문을 true로 설정하여 각 case의 조건을 평가
+      
+        case (9 <= mon && mon <= 11): // 입력받은 현재 월이 9~11월 사이라면?    
+          message = "독서의 계절 가을 이네요!!"; // "독서의 계절 가을 이네요!!" <- 출력
+          break;
+      
+        case (6 <= mon && mon <= 8): // 입력받은 현재 월이 6~8월 사이라면? 
+          message = "여행가기 좋은 여름이네요!!";  //"여행가기 좋은 여름이네요!!" <- 출력
+          break;
+      
+        case (3 <= mon && mon <= 5): // 입력받은 현재 월이 3~5월 사이라면?
+          message = "햇살 가득한 봄이네요!!";   //"햇살 가득한 봄이네요!!" <- 출력
+          break;
+
+        default:  // 그밖의 월을 입력 했다면?
+          message = "스키의 계절 겨울이네요!!";  // "스키의 계절 겨울이네요!!" <- 출력
+      }
+      
+      document.write(message);
+
+    </script>
+  </body>
+</html>

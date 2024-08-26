@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연습문제 1</title>  
+  <style>
+    #container {
+      width: 600px;
+      margin: 20px auto;
+    }
+    h1 {
+      font-size:1.5rem;
+      text-align:center;
+      margin-bottom:20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>마우스 오버하면 이미지 바꾸기</h1>
+    <img src="images/pic-1.jpg" alt="">
+  </div>
+
+  <script>
+    const image = document.getElementsByTagName("img")[0];
+    
+    image.addEventListener("mouseover",changeImg);
+    image.addEventListener("mouseout",img);
+
+    function changeImg(){
+
+      image.src = "images/pic-6.jpg";
+
+    }
+
+    function img(){
+      image.src = "images/pic-1.jpg";
+
+    }
+
+
+
+  </script>
+
+</body>
+</html>

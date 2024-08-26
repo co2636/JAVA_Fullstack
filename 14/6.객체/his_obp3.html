@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>history객체3</title>
+</head>
+<body>
+  <h1>세 번째 페이지(his_obp3.html)</h1>
+
+  <!-- 
+    history객체의 go()메소드 호출시 -1을 집어 넣으면 바로 이전 방문했던 1단계 이전페이지(his_obp2.html)를 재요청해 보여줌
+    만약 -2를 집어 넣으면 2단계 이전페이지(his_obp1.html)를 재요청해 보여줌
+
+  -->
+
+  <button onclick="history.go(-1);">1단계 이전 페이지 이동</button> <br>
+  <button onclick="history.go(-2);">2단계 이전 페이지 이동</button> <br>
+  
+
+</body>
+</html>

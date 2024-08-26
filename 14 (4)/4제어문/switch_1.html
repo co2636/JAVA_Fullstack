@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script>
+//주제 : 즐겨 이용하는 사이트 명을 입력받아
+//       입력 받은 사이트를 자동으로 재요청해서 보여주는예
+
+//순서1. prompt함수를 이용하여  즐겨 이용하는 사이트 명을 입력받아
+//       site이름의 변수를 만들어 저장
+let site = prompt("네이버, 다음, 네이트, 구글 중 즐겨 이용하는 사이트명 입력하세요");
+//  "네이트"
+
+
+let url; //입력받은 사이트 명에 따라 실제 http주소를 저장시킬 변수 
+  
+//순서2. switch문을 이용하여 입력받은 사이트명에따라 
+//       각 사이트주소를 각각 다른 주소로 url변수에 저장 시키자
+switch (site) {// 입력받은 사이트명 -> 네이버 또는 다음 또는 네이트 또는 구글 중 하나
+        //"네이트"
+
+  //위 site변수에 저장된 입력한 사이트명이 "네이버" 문자열과 같으냐?
+  case "네이버":
+    url = "www.naver.com"; //url변수에 네이버사이트 주소 저장 
+    break; // switch문 전체를 빠져나감
+
+  //위 site변수에 저장된 입력한 사이트명이 "다음"문자열과 같으냐?
+  case "다음":  
+    url = "www.daum.net"; //url변수에 다음 주소 저장
+    break;
+  
+  //위 site변수에 저장된 입력한 사이트명이 "네이트" 문자열과 같으냐?
+  case "네이트":
+    url = "www.nate.com"; //url변수에 네이트 주소 저장
+    break;
+ 
+  //위 site변수에 저장된 입력한 사이트명이  "구글" 문자열과 같으면?
+  case "구글":
+    url = "www.google.com";
+    break;
+
+  //"네이버", "다음", "구글" 이외 다른 단어를 입력했다면?
+  default:
+    //알림창 alert
+    alert("보기 중에 없는 사이트명이 입력되었어요.");
+}
+
+//순서3. 만약에~ 변수 url에 포탈사이트주소가 저장되어 있을 경우에는
+if( url ){
+  //location객체 : 웹브라우저 주소창에 작성한 주소정보를 제공하는 객체
+
+  //location객체의 href속성에 재요청할 주소를  저장시키면
+  //저장시킨 사이트주소로 재요청하게 됩니다.
+  location.href = "http://" + url;
+              //  http://www.nate.com
+  
+
+}
+
+// if의 ()괄호 사이에 조건식을 작성할수 있는데
+// 조건식의 결괏값이 아래와 같은 값들이 오게 되면 모두 false로 간주 합니다.
+// 그외에 값을 결괏값이 오면 모두 true로 간주 합니다.
+// false  ->   false
+// 0      ->   false
+// ""     ->   false
+// null   ->  false
+// undefiend -> false
+// NaN      ->  false 
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

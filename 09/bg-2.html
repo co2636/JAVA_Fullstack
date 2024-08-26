@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배경이미지 사용하기</title>
+    <style>
+      ul {
+        list-style: none; /* 불릿 없앰 */
+        margin-left: -30px; /* 왼쪽 바깥 여백 줄임*/
+      }
+
+      li {
+        background-repeat: no-repeat; /* 보여지는 이미지 반복 하지 않음 */
+        background-image: url("./images/book-icon.png"); /* 배경 이미지 삽입 */
+        background-position: left center; /* 배경 이미지 위치 조정 */
+
+        /* 왼쪽 안쪽 여백(padding) 50px로 설정 */
+        padding-left: 50px;
+        /* 선택한 모든 li요소들의 줄 간격 40px만큼 띄움 */
+        line-height: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>이지스퍼블리싱</h1>
+    <ul>
+      <li>회사소개</li>
+      <li>도서</li>
+      <li>자료실</li>
+      <li>질문답변</li>
+      <li>동영상강의</li>
+    </ul>
+  </body>
+</html>

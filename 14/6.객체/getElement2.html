@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="title">title</h1>
+  <p class="text">text-1</p>
+  <p class="text">text-2</p>
+
+  <script>
+    const el = document.getElementById("title");
+
+    // <h1 id="title">title</h1>
+    console.log(el);
+
+    //class속성에 부여한 값이 text과 일치하는 모든 요소들을 
+    //<p class="text">text-1</p>
+    //<p class="text">text-2</p>
+    // 배열에 담아 배열 자체를 반환해 준다.
+    // [ <p class="text">text-1</p>, <p class="text">text-2</p> ]
+    //              0                             1                   index
+    const classEl = document.getElementsByClassName("text");
+
+    console.log(classEl[0]); //<p class="text">text-1</p>
+    console.log(classEl[1]); //<p class="text">text-2</p>
+
+    //메소드 호출시 요소노드명 p(태그명)을 전달하면 p와 일치하는 모든 p요소 노드들을 배열에 담아 선택해 온다.
+    // [ <p class="text">text-1</p>, <p class="text">text-2</p> ]
+    //              0                             1                   index
+    const tagEls = document.getElementsByTagName("p");
+    
+    console.log(tagEls[0]);//<p class="text">text-1</p>
+    console.log(tagEls[1]);//<p class="text">text-2</p>
+  </script>
+
+
+</body>
+</html>

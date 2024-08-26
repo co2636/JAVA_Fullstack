@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>고급 선택자(~)</title>
+    <!-- 
+      CSS 고급 선택자 종류 중에서  ~ 형제선택자
+
+      - 형제선택자기호 ~ 는 인접형제선택자 +와는 달리
+        처음으로 선택한 요소를 기준으로 뒤에 작성한 
+        모든 동생형제요소들을 한꺼번에 모두 선택하는 선택자 
+
+      - 기본 문법
+                  처음으로선택한요소 ~ 최종선택해올동생형제요소들선택{ 스타일 정의; }
+
+    -->
+    <style>
+      body {
+        background-color: #eee;
+      }
+      section {
+        width: 600px;
+        margin: 20px auto;
+      }
+      p {
+        width: 500px;
+        padding: 10px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        line-height: 2;
+      }
+      /* 
+        h1요소를 먼저 선택해오고
+        ~ 형제 선택자를 이용해 모든 동생형제요소들을 선택해 오는데 
+        그중에서도 p동생형제요소들을 최종선택 
+         
+      */
+      h1 ~ p {
+        background-color: #222; /* 배경은 검은색 */
+        color: #fff; /* 글자는 흰색 */
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1>예약 방법 & 이용 요금</h1>
+      <p>
+        아직 온라인 예약 신청이 준비되어 있지 않습니다.
+        <br />전화(xxx-xxxx-xxxx)로 문의 바랍니다.
+      </p>
+      <p>가족실(2~4인) : 60,000원/일</p>
+      <p>도미토리(4인 공용) : 25,000원/일</p>
+    </section>
+  </body>
+</html>

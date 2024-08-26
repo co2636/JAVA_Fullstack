@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>비교연산자</title>
+  </head>
+  <body>
+    <script>
+      let numberA = 2;
+      let numberB = 2;
+      let numberC = "2";
+
+      document.write(numberA === numberB, "<br>"); // true 출력
+      //                 2   ===    2
+
+      document.write(numberB === numberC, "<br>"); // false 출력
+      //                 2   ===   "2"
+      // 같은 숫자 2일지라도 2는 숫자형 "2"는 문자열형 이기 때문에 같지않으므로 false를 출력
+
+      document.write(numberB == numberC, "<br>"); // true 출력
+      //                 2   ==    "2"
+      //  자료형은 달라도 숫자형태의 값은 동일하므로 같으냐고 비교했을때 컴퓨터는 같다(true)로 인식한다.
+    </script>
+  </body>
+</html>

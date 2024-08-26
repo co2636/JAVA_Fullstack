@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>내장객체</title>
+</head>
+<body>
+  <!-- 
+    주제 : new 키워드와 기본 객체 메모리를 생성하는 Object()생성함수를 이용해 개발자가 직접 객체 메모리 만들어 보기
+
+  -->
+  
+  <!-- 변수선언 = new 생성함수(); -->
+
+  <script>
+    // 현실에 존재하는 TV객체를 모델링하여 속성과 기능을 추출
+    // 속성(데이터) : 너비(30cm), 높이(25cm), 무게(20kg), 색상(흰색)
+    // 메소드(기능) : 전원기능, 채널을 돌리는 기능, 볼륨을 높이거나 낮추는기능
+    
+    //TV객체 메모리 생성
+    let lgTv = new Object();
+
+    //만들어진 lgTv객체 메모리에 접근하여 속성과 메소드를 만들어 추가하자
+    //속성을 만들고 속성에 데이터를 저장하는 방법
+    //    new Object();의해 생성된 객체메모리의 주소번지가 저장된 lgTv참조변수.생성할속성명 = 저장값데이터;
+    //
+    lgTv.width = "30cm";
+    lgTv.height = "25cm";
+    lgTv.weight = "20kg";
+    lgTv.color = "white";
+
+    // 생성된 lgTv객체 메모리 내부에 TV전원을 끄는기능(메소드)을 만들어 추가
+    
+    // 메소드를 만들어 lgTv객체 메모리에 추가하는 방법
+    //      lgTv참조변수명.생성할_속성명 = function(){ 기능을 코드로 구현; } 
+
+    lgTv.off = function(){ 
+      // 기능을 코드로 구현
+        document.write("전원 off<br>");
+      
+
+    }
+//-------------------------------------------------------------------------------------------------------------
+// 위 만들어 놓은 lgTv객체 메모리 내부에 있는 속성에 저장된 값 가져오기
+// 문법
+//     lgTv참조변수명.값이저장된_속성명;
+    document.write(lgTv.width + '<br>'); // lgTv 객체 메모리 내부에 있는 width속성에 저장된 30cm를 가져와 출력
+    document.write(lgTv.height + '<br>');// 25cm
+    document.write(lgTv.weight + '<br>');// 20kg
+    document.write(lgTv.color + '<br>');//white
+
+    //위 객체 메모리 내부에 만들어놓은 off메소드 호출!
+    //문법
+    //    lgTv참조변수명.
+    lgTv.off();
+
+  </script>
+</body>
+</html>
+
+

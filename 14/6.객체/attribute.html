@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>메소드로 속성 조작</title>
+</head>
+<body>
+  <a href="http://www.naver.com">네이버</a>
+  <br>
+  <h1 id="hi">안녕</h1>
+  <br>
+  <p class="p1" id="p2">안녕하세요 반갑습니다.</p>
+  <br>
+  <h2 class="red-color" id="h">안녕2</h2>
+
+  <script>
+    //주제1. 선택한 요소노드의 속성을 삭제
+    const h2 = document.querySelector(".red-color");
+    h2.removeAttribute("id"); //id 속성 삭제
+    //<h2 class="red-color">안녕2<h2>
+
+
+    //주제2. 속성과 같이 저장된 값을 변경
+    // [<p class="p1" id="p2">안녕하세요 반갑습니다.</p>]  -> getElementsByTagName으로 호출하면 배열에 담아서 가져옴
+    //                      0
+    //<p class="p1" id="p2">안녕하세요 반갑습니다.</p>
+    const p = document.getElementsByTagName("p")[0];
+    p.setAttribute("id","p1"); // <p class="p1" id="p1">안녕하세요 반갑습니다.</p>
+
+
+    //주제3. 속성에 대한 값 얻기
+    //<h1 id="hi">안녕</h1> 요소노드를 선택해서 가져와
+    // 최종 id속성에 부여된 "h1"값을 얻어 console.log로 출력!
+    console.log(document.querySelector("h1").getAttribute("id"));
+
+    // <a href="http://www.naver.com">네이버</a> 요소노드를 선택해서 가져와 aEl 상수에 저장
+    // "네이버" -> "구글"로 변경 , href속성에 대한 주소값 "http://www.naver.com"을 얻어 href 상수에 저장
+    // href 상수에 저장된 주소값 출력
+    const aEl = document.querySelector("a");
+    aEl.innerText = "구글";
+    const href = aEl.getAttribute("href");
+    console.log(href);
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>문제 1</title>
+</head>
+<body>
+  <script>
+   // 1. 원의 넓이를 구하는 공식은 (반지름) × (반지름) × (원주율)입니다. 원주율은 3.14라고 했을 때, 
+   //    원의 반지름을 이용해 원의 넓이를 반환하는 함수를 만들어 보세요.
+   
+   function getCircleArea(radius){
+    
+    //원 널이를 계산해서 반환
+    return radius * radius * 3.14;
+
+   }
+
+  const area = getCircleArea(10);
+  
+  console.log(`원의 넓이는 : ${area}`);
+
+  </script>
+</body>
+</html>

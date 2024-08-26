@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<title> switch문 </title>
+<script type="text/javascript">
+  // 방문자에게 현재 월을 입력받습니다. 기본 값은 숫자 0으로 되어 있습니다.
+  // prompt를 통해 사용자로부터 입력받은 문자열을 10진수 정수로 변환하여 변수 mon에 저장
+  var mon = parseInt(prompt("현재는 몇 월입니까?", "0"), 10);  
+
+  var message;  // 계절 메시지를 저장할 변수를 선언
+
+  switch (true) {  // switch 문을 true로 설정하여 각 case의 조건을 평가합니다.
+
+    case (mon >= 9 && mon <= 11):  // mon이 9, 10, 11월인 경우
+      message = "독서의 계절 가을이네요!!";  // 가을에 해당하는 메시지를 설정
+      break;  // switch 문을 종료
+
+    case (mon >= 6 && mon <= 8):  // mon이 6, 7, 8월인 경우
+      message = "여행 가기 좋은 여름이네요!!";  // 여름에 해당하는 메시지를 설정
+      break;  // switch 문을 종료
+
+    case (mon >= 3 && mon <= 5):  // mon이 3, 4, 5월인 경우
+      message = "햇살 가득한 봄이네요!!";  // 봄에 해당하는 메시지를 설정
+      break;  // switch 문을 종료
+      
+    default:  // 위의 조건에 해당하지 않는 모든 경우
+      message = "스키의 계절 겨울이네요!!";  // 겨울에 해당하는 메시지를 설정
+  }
+
+  document.write(message);  // 설정된 메시지를 HTML 문서에 출력
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

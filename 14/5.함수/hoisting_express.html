@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>호이스팅2</title>
+</head>
+<body>
+  <script>
+    // 2. 표현식 방식으로 만들기.  호이스팅 불가능
+    //    const 변수명 = function(){};
+    //    const 변수명 = function 함수명(){};
+
+    //2. 함수 표현식 방식으로 함수 만들기
+    // -> 호이스팅이 안됨. 실제 실행 결과를 보면 'printHello()는 함수가 아니다'라는 오류 메세지가 나옴.
+
+    printHello(); //오류. 호이스팅이 안되어 함수 호출 할 수 없음.
+
+    const printHello = function printHello(){
+
+      console.log('Hello');
+
+    };
+
+
+
+
+  </script>
+</body>
+</html>

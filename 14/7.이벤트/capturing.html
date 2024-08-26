@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 캡처링</title>
+    <link rel="stylesheet" href="css/event.css">
+  </head>
+  <body>
+    BODY
+    <div>
+      DIV
+      <section>
+        SECTION
+        <p>
+          p
+        </p>
+      </section>
+    </div>
+    <script>
+      //모든 요소를 선택해서 가져와 elements 상수에 저장
+      const elements = document.querySelectorAll("*");
+
+      //NodeList 유사배열에 저장된 선택한 모든 요소노드를 순회하면서 click이벤트 등록하고 각 click이벤트가 발생했을때.. 
+      //event객체의 target속성과, event객체의 currentTarget속성을 호출한 값 출력
+      /*
+      for(배열에 저장된 데이터를 차례대로 저장시킬 변수 선언 of 반복해서사용할배열명){  }
+      */
+    
+      for(let element of elements){
+
+        element.addEventListener("click", e => 
+
+          console.log(`event.target : ${e.target.tagName}, event.currentTarget : ${e.currentTarget.tagName} `)
+
+        , true);
+
+      }
+       
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>증감연산자3</title>
+  </head>
+  <body>
+    <script>
+      let a = 3;
+      let b = 4;
+      let c = a++ + ++b + b++ + ++a;
+      //[ ] = [3]++ + ++[4] + [4]++ + ++[3]; //a = 4, b = 5;
+      //[ ] = [3]   +   [5] + [5]++ + ++[4]; //a = 5, b = 6;
+      //[ ] = [3]   +   [5] + [5]   +   [5];
+      //[ ] =     [8]       +       [10];
+      //[18] =
+      // c = 18, a = 5, b = 6;
+
+      /*
+        c변수값을 계산하는 과정
+        1. a++: 현재 a의 값은 3이다.
+                이 식은 현재 a의 값을 사용하고, 이 후에 a를 1 증가시킨다.
+                따라서, 이 시점에서 a++는 3을 반환하고, a는 4가 된다.
+
+        2. ++b: 현재 b의 값은 4이다.
+                이 식은 먼저 b를 1증가시킨다. 그다음 값을 사용한다.
+                따라서, ++b는 5를 반환하고, b는 5가 된다.
+        
+        3. b++: 현재 b의 값은 5이다.
+                이 식은 현재 b의 값을 사용하고, 이후에 b를 1 증가시킨다.
+
+
+        4. ++a:
+
+        5. c = a++ + ++b + b++ + ++a
+          이제 c는 
+          
+      */
+
+      document.write(c, "<br>"); //18
+      document.write(a, "<br>"); //5
+      document.write(b, "<br>"); //6
+    </script>
+  </body>
+</html>

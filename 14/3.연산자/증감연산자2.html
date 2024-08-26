@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>증감연산자2</title>
+  </head>
+  <body>
+    <script>
+      let x = 5;
+      let y = x++ + ++x;
+      // [ ] = [5]++ + ++[5];
+      // [ ] = [5]   + ++[6];
+      // [ ] = [5]   +  [7];
+      //[12] =
+      // y = 12 , x = 7;
+
+      // y변수값을 계산하는 과정
+      // 1. x++ 현재 x변수에 저장된 값 5를 먼저 사용, x++ 자리에는 5가 투입된다.
+      // 2. ++x를 하기전에 x++에 의해 x는 6이 된다.
+      // 3. ++x 자리에 ++6이 되어 x변수의 값은 1 증가하여 7이 된다.
+      // 4. 현재 식은 x++ 자리에는 5, ++x 자리에는 7이 온다.
+      // 5.  5 + 7을 계산해서 12로 만들어 준다.
+      // 6. y = 12를 대입해서 저장시킨다.
+
+      document.write(y, "<br>"); // 12
+      document.write(x, "<br>"); // 7
+
+      let x1 = 5;
+      let y1 = x1-- + --x1;
+      // [ ] = [5]-- + --[5];
+      // [ ] = [5]   + --[4];
+      // [ ] = [5]   + [3];
+      // [8] =
+      // y1 = 8 , x1 = 3;
+
+      document.write(y1, "<br>"); // 8
+      document.write(x1, "<br>"); // 3
+    </script>
+  </body>
+</html>

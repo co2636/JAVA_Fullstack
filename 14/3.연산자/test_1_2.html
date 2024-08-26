@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문제2</title>
+  </head>
+  <body>
+    <script>
+      /*
+      문제2. 다음 연산자를 이용하여 평균 판매량을 구하고,
+             4분기 판매량을 입력하여 평균 판매량의 이상/미달 값을 출력하세요.
+
+             내용
+                  질의응답창(promot)를 이용하여 4분기 판매량을 입력하고,
+                  전 분기 평균 판매량보다 판매량이 높거나 같을 경우에는
+                  "판매량이 평균 이상입니다." 라고 출력하고,
+                  낮을 경우에는 "판매량이 평균 미달입니다." 라고 화면에 출력하세요.
+
+            분기별 판매량
+                            판매량
+                  1분기      1,200
+                  2분기      1,300
+                  3분기      1,000
+                  4분기      
+                
+
+    */
+      let part1 = 1200;
+      let part2 = 1300;
+      let part3 = 1000;
+
+      let avg = (part1 + part2 + part3) / 3;
+      let part4 = prompt("4분기 판매량을 입력하시오.", "0");
+
+      part4 >= avg
+        ? document.write("판매량이 평균 이상입니다.")
+        : document.write("판매량이 평균 미달입니다.");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>리터럴 표기법</title>
+</head>
+<body>
+    <script>
+      // 자동차 객체 만들기
+      // let 참조변수명 = { 속성명:값, 속성명:값, 속성명:function(){ 기능코드; } };
+      let car = { 
+                  // 데이터가 저장되는(속성)
+                  color:"빨강", 
+                  model:"소나타",
+                  type : "가솔린",
+
+                  //기능(메소드)
+
+                  go:function(){ //주행하는 기능의 메소드
+
+                    console.log("자동차가 주행합니다.");
+
+                  },
+
+                  stop:function(){// 정지하는 기능의 메소드
+                    
+                    console.log("자동차가 정지합니다.");
+
+                  }
+                
+                
+                };
+  //---------------------------------------------------------------------------------------------------------
+  // 위에서 만든 car객체 메모리의 속성값 얻기
+  // 문법
+  //      car.참조변수명.얻을값이저장된속성명; 
+
+      console.log(car.color); // 빨강
+      console.log(car.model); // 소나타
+      console.log(car.type); // 가솔린
+
+      //위에서 만든 car객체 메모리의 메소드 호출해서 사용
+      //문법
+      //    car참조변수명.function이 저장된 속성명;
+      
+      car.go(); // 자동차가 주행합니다.
+      car.stop(); // 자동차가 정지합니다.
+
+
+
+
+
+    </script>
+</body>
+</html>

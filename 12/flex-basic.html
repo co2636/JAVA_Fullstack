@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>플렉스 연습</title>
+
+  <style>
+    /* 
+      주제 : 플렉스 박스 레이아웃으로 1차원 레이아웃 설계하기
+
+      - 플렉스 박스는 1차원 방식으로 효과적으로 레이아웃을 설계할 수 있도록 
+        고안된 스타일 속성 작성방법이다.
+
+      - 여기서 1차원 방식이란? 가로 나 세로 중 한 방향으로만 레이아웃을 설계하는 방식을 말함.
+
+      - 플렉서블은 우리말로 '신축성 있는','유연한'이라는 뜻이므로 
+        다양한 상황에서 유연하게 레이아웃을 구성할 수 있도록 다양한 속성들을 제공한다는 의미이다.  
+
+      - 플렉서블 박스 레이아웃은 플렉스 박스 레이아웃 이라고도 한다.
+
+    */
+
+    .flex-container{
+      width: 300px;
+      height: 200px;
+      background-color: #c4c4c4;
+      border: 1px solid black;
+
+      /* 
+        display속성
+          -> 모든 플렉스 박스 레이아웃은 display속성값을 flex나 inline-flex으로 지정해서 시작한다.
+          -> 형식 : display : flex; 또는  inline-flex;
+          -> flex는 적용된 모든 항목 요소의 다음 요소들이 항상 줄바꿈이 되고, 
+             inline-flex는 다음요소가 주변에 배치되게 한다. 
+
+          -> display속성이 지정된 요소는 플렉스 컨테이너가 되고, 자식요소는 플렉스 항목(아이템)이 된다.
+      */
+      display: flex; /* 자식 div들이 수직(세로)에서 수평(가로) 방향으로 배치 */
+                     /* 이때 플렉스 항목이 원래 가지고 있던 박스 성격(인라인/인라인블록/블록)은 무시된다. */
+      
+      /*
+        flex-direction 속성
+        - 이 속성은 플렉스 박스 레이아웃의 주축 방향을 결정한다.
+        - 형식
+              flex-direction : 속성값
+
+        - 속성값 종류
+          row               주축 방향을 왼쪽에서 오른쪽으로 배치 지정한다. (기본값)
+          row-reverse       주축 방향을 오른쪽에서 왼쪽으로 배치 지정한다.
+          column            주축 방향을 위쪽에서 아래쪽으로 배치 지정한다.
+          column-reverse    주축 방향을 아래쪽에서 위쪽으로 배치 지정한다.
+
+        - 플렉스 박스 레이아웃은 기본으로 flex-direction 속성값이 row로 적용됨
+
+      */
+
+      /* flex-direction: row; */
+      
+      /* 
+        flex-wrap속성
+          - 이 속성은 플렉스 항목(아이템)이 플렉스 컨테이너 영역을 벗어날때 어떻게 처리할지를 결정하는 속성이다.
+            설정하지 않으면 기본으로 설정되는 값으 nowrap 이다.
+
+          - 사용할 수 있는 속성값들
+
+            nowrap              플렉스 항목이 플렉스 컨테이너 영역을 벗어나도 무시한다. (기본값)
+            wrap                플렉스 항목이 플렉스 컨테이너 영역을 벗어나면 줄바꿈한다.
+            wrap-reverse        플렉스 항목이 플렉스 컨테이너 영역을 벗어나면 wrap의 역방향으로 줄바꿈한다.
+
+          - 형식
+                 flex-wrap : 속성값;
+      
+      */
+
+      /* flex-wrap: wrap; */
+
+      /* 
+        flex-flow 속성
+        - 이 속성은 flex-direction속성과 flex-wrap속성을 한번에 사용할 수 있는 단축 속성이다.
+          예 
+              다음 처럼 작성된 flex속성이 있다고 해보자.
+
+                flex-direction : column;
+                flex-wrap : nowrap;
+
+              이럴 때 다음과 같이 flex-flow속성으로 한번에 2개의 값을 한꺼번에 설정 가능
+                flex-flow : column nowrap;
+
+        - 형식
+              flex-flow : flex-direction속성값 flex-wrap속성값;
+
+      */
+      
+      /* 
+        플렉스 박스 레이아웃의 정렬 속성
+        - 플렉스 항목(아이텀)을 정렬할 수 있는 속성을 말함.
+
+          1. justify-content 속성
+            이 속성은 플렉스 항목을 주축 방향으로 정렬할때 사용하는 속성이다.
+            - 형식
+                  justify-content : 속성값;
+            - 속성값 종류
+                flex-start            주축 방향의 시작을 기준으로 정렬한다.   
+                flex-end              주축 방향의 끝을 기준으로 정렬한다.
+                center                주축 방향의 중앙에 정렬한다.
+                space-between         플렉스 항목 사이의 간격이 균일하도록 정렬한다.
+                space-around          플렉스 항목의 둘레(around)가 균일하도록 정렬한다.
+                space-evenly          플렉스 항목사이와 양끝 간격이 균일하도록 정렬한다.
+
+
+
+      */
+
+      /* justify-content: flex-start; */
+
+      /* 
+        2. align-items 속성
+            - 이 속성은 플렉스 항목을 교차축 방향으로 정렬할때 사용
+            - 형식
+                    aling-items: 속성값;
+            
+            - 속성값의 종류
+              
+              stretch             교차축 방향으로 플렉스 항목의 너비나 높이가 늘어나게 하는 값
+              flex-start          교차축 방향의 시작점을 기준으로 정렬한다.
+              flex-end            교차축 방향의 끝점을 기준으로 정렬한다.
+              center              교차축 방향의 중앙을 기준으로 정렬한다.
+              baseline            플렉스 항목의 baseline을 기준으로 정렬한다.
+
+          참고. 플렉스 박스 레이아웃은 기본으로 align-items속성에 stretch값이 적용되어 있다.
+                그래서 단순하게 display속성에 flex나 inline-flex값만 적용해도 플렉스 항목이 플렉스 컨테이너의 높이만큼 가득 차게 늘어난다.
+
+      
+      */
+
+      /* align-items: baseline; */
+
+      /* 
+        참고. align-content 속성도 플렉스 항목을 교차축방향으로 정렬할때 사용함
+              그러나 align-items속성과 다르게 플렉스 항목이 flex-wrap속성 때문에 두 줄이상 됐을때만 사용함
+      */
+
+      /* align-content: center; */
+    
+    }
+
+/* 
+    align-items속성으로 플렉스 항목(아이템)을 한번에 모두 정렬하지 않고 
+    각각 항목들을 정렬하고 싶을때는 align-self 속성을 사용하면 된다.
+
+*/
+    .flex-item:nth-child(1){
+      align-self: flex-start;
+    }
+
+    .flex-item:nth-child(2){
+      align-self: flex-end;
+    }
+
+    .flex-item:nth-child(3){
+      align-self: center;
+    }
+
+    .flex-item:nth-child(4){
+      align-self: baseline;
+    }
+
+
+    .flex-item{
+      background-color: #ff5252;
+      color: white;
+    }
+
+
+
+  </style>
+</head>
+<body>
+  <!-- 플렉스 컨테이너 (부모요소)
+        : display속성값으로 flex 나 inline-flex가 적용된 요소를 말함.
+        
+  -->
+  <div class="flex-container">
+
+    <!-- 플렉스 항목, 아이템(자식요소들) -->
+    <div class="flex-item">item-1</div>
+    <div class="flex-item">item-2</div>
+    <div class="flex-item">item-3</div>
+    <div class="flex-item">item-4</div>
+    <!-- <div class="flex-item">item-5</div>
+    <div class="flex-item">item-6</div>
+    <div class="flex-item">item-7</div>
+    <div class="flex-item">item-8</div>
+    <div class="flex-item">item-9</div>
+    <div class="flex-item">item-10</div>
+    <div class="flex-item">item-11</div> -->
+
+  </div>
+</body>
+</html>

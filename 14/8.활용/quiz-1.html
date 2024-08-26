@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연습문제 1</title>  
+  <link rel="stylesheet" href="css/quiz-1.css">
+</head>
+<body>
+  <div id="container">
+    <h1>참가자 명단</h1>
+    <form>
+      <ul id="userInput">  
+        <li>
+          <label for="username">이 름</label>
+          <input type="text" id="username">
+        </li>    
+        <li>
+          <label for="major">전 공</label>
+          <input type="text" id="major">
+        </li>           
+      </ul>
+      <button>등록하기</button>      
+    </form>
+    
+    <table id="attendant">
+      <thead>
+        <tr>
+          <th>이 름</th>
+          <th>전 공</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script>
+    const username = document.querySelector("#username"); // 입력받은 이름을 username에 저장
+    const major = document.querySelector("#major"); // 입력받은 전공을 major에 저장
+    const button = document.querySelector("form > button"); // 등록하기 버튼
+    const tbody = document.querySelector("#attendant > tbody"); // tbody
+
+    button.addEventListener("click", registration); //클릭 이벤트 등록
+
+    function registration(e){
+      e.preventDefault(); // 창을 새로 불러오는걸 막아줌. submit 차단
+
+      const item = document.createElement("tr"); // <tr></tr> 생성 - 입력받은 이름이랑 전공 <td>가 들어감
+      const name = document.createElement("td"); // <td></td> 생성 - 입력한 이름이 들어감
+      const maj = document.createElement("td");  // <td></td> 생성 - 입력한 전공이 들어감
+
+      name.innerHTML = `${username.value}`; // <td>username.value</td>
+      maj.innerHTML = `${major.value}`; // <td>major.value</td>
+
+      item.appendChild(name); // <tr> <td>username.value</td> </tr>
+      item.appendChild(maj);  // <tr> <td>major.value</td> </tr>
+
+      tbody.appendChild(item);
+      /*
+      
+        <tbody>
+          <tr>
+            <td>username.value</td> // 입력받은 이름
+            <td>major.value</td>    // 입력받은 전공
+          </tr>
+        </tbody>
+
+      */
+
+      // 등록하기 버튼을 누른 후 이름과 전공 입력받는 부분에 빈공백을 넣어 다음 입력값을 받을 수 있게 함.
+      username.value = ""; 
+      major.value = "";
+      
+    }
+
+
+  </script>
+  
+</body>
+</html>

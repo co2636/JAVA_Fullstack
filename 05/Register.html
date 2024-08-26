@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원가입</title>
+</head>
+<body>
+  <table border="1" width="100%" align="center">
+    <tr>
+      <td colspan="2" align="center">회원가입</td>
+    </tr>
+
+    <tr>
+      <td>*이름</td>
+      <td><input type="text" name="uName" id="uName"></td>
+    </tr>
+
+    <tr>
+      <td>*ID</td>
+      <td>
+        <input type="text" name="uID" id="uID">
+        <input type="button" name="checkID" value="유효성확인">
+      </td>
+    </tr>
+
+    <tr>
+      <td>*비밀번호</td>
+      <td><input type="password" name="uPWD" id="uPWD"></td>
+    </tr>
+
+    <tr>
+      <td>*비밀번호확인</td>
+      <td><input type="password" name="uPWD_Confirm" id="uPWD_Confirm"></td>
+    </tr>
+
+    <tr>
+      <td>*직업</td>
+      <td>
+        <select name="work">
+          <option selected>직업명</option>
+          <option value="기타V">기타</option>
+          <option value="회사원V">회사원</option>
+          <option value="학생V">학생</option>
+        </select>
+      </td>
+    </tr>
+
+    <tr>
+      <td>*성별</td>
+      <td>
+        <input type="radio" name="gender" value="male">남자
+        <input type="radio" name="gender" value="female">여자
+      </td>
+    </tr>
+
+    <tr>
+      <td>*취미</td>
+      <td>
+        <input type="checkbox" name="hobby" value="d1">독서
+        <input type="checkbox" name="hobby" value="d2">등산
+        <input type="checkbox" name="hobby" value="d3">낚시
+      </td>
+    </tr>
+
+    <tr>
+      <td>*가입동기</td>
+      <td>
+        <textarea rows="20" cols="100" name="motivation"></textarea>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="2" align="center">
+        <input type="submit" value="가입">
+        <input type="reset" value="다시입력">
+      </td>
+    </tr>
+
+  </table>
+</body>
+</html>

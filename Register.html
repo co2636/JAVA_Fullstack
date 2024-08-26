@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+ <style>
+    .error-message {
+      color: red;
+    }
+  </style> 
+
+</head>
+<body>
+<table border="1" align="center">
+    <tr>
+        <td colspan="2" align="center">회원가입</td>
+    </tr>
+    <tr>
+        <td>*이름</td>
+        <td><input type="text" name="uName" id="uName"/><span id="uNameError" class="error-message"></span></td>
+    </tr>
+    <tr>
+        <td>*ID</td>
+        <td><input type="text" name="uID" id="uID"/><span id="uIDError" class="error-message"></span></td>
+    </tr>
+    <tr>
+        <td>*비밀번호</td>
+        <td><input type="password" name="uPWD" id="uPWD"/><span id="uPWDError" class="error-message"></span></td>
+    </tr>
+    <tr>
+        <td>*비밀번호 확인</td>
+        <td><input type="password" name="uPWD_Confirm" id="uPWD_Confirm"/><span id="uPWDConfirmError" class="error-message"></span></td>
+    </tr>
+    <tr>
+        <td>*직업</td>
+        <td>
+            <select name="work" id="work">
+                <option selected>직업명</option>
+                <option value="기타">기타</option>
+                <option value="회사원">회사원</option>
+                <option value="학생">학생</option>
+            </select>
+            <span id="workError" class="error-message"></span>
+        </td>
+    </tr>
+    <tr>
+        <td>*성별</td>
+        <td>
+            남자<input type="radio" name="sex" id="s1" value="male"/>
+            여자<input type="radio" name="sex" id="s2" value="female"/>
+            <span id="sexError" class="error-message"></span>
+        </td>
+    </tr>
+    <tr>
+        <td>*취미</td>
+        <td>
+            <input type="checkbox" name="hobby" id="h1" value="독서"/>독서
+            <input type="checkbox" name="hobby" id="h2" value="등산"/>등산
+            <input type="checkbox" name="hobby" id="h3" value="낚시"/>낚시
+            <span id="hobbyError" class="error-message"></span>
+        </td>
+    </tr>
+    <tr>
+        <td>*가입동기</td>
+        <td>
+            <textarea rows="20" cols="100" name="motivation"></textarea>
+            <span id="motivationError" class="error-message"></span>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+           <input type="button" value="가입"/> 
+        </td>
+    </tr>
+</table>
+
+    <script type="text/javascript">
+    /*
+             문제. 자바스크립트 문법을 사용하여 회원가입 폼의 유효성을 검사하는 코드입니다.
+             위의  HTML태그 내용과 같은 회원가입 폼이 있다고 했을 때  자바스크립트 문법 만을 이용해서 
+             모든 입력이 되었는지,  
+             아이디를 3자 ~ 7자 사이로 입력했는지,  
+             비밀번호를 4자 ~ 10자 사이로 입력했는지,  
+             입력한 비밀번호와 비밀번호 확인의 데이터가 같은지, 
+             직업을 선택했는지,  
+             성별을 선택 또는 체크 했는지,  
+             취미를 하나 이상 체크 했는지, 
+             가입동기를 입력 했는지 유효성 검사 하는 코드를 전체 작성 해 주고  각 줄에 주석을 다시오.
+    */
+    
+    // 가입  <input type="button" value="가입"/> 요소를 선택해서 변수에 저장
+    let joinButton = document.querySelector("input[type=button]"); 
+    
+    //선택한 요소에 click이벤트 등록하고 click이벤트가 발생하면 처리할 이벤트 핸들러 함수 연결
+    //문법
+    //   요소선택.addEventListener('등록할 이벤트 종류명', 이벤트 처리할 function(){} );
+
+    joinButton.addEventListener('click', function(){
+
+        //모든 입력 태그에 잘 입력되었는지 유효성 검사를 위해 validateForm함수를 호출해 처리함
+        if(validateForm()){
+            alert("정상적으로 회원 가입이 완료되었습니다.");
+
+        }
+
+
+    });
+
+    function validateForm() {
+        //이름 입력 확인
+        let uname = document.getElementById("uName").value; // uname변수를 만들어서 inpput으로 입력한 내용값을 받아서 저장
+        if(uname == ""){ 
+            alert("이름을 입력하시오.");
+            return false; //조건식을 판단 할 값으로 이름을 입력 안했음을 나타내는 false를 반환
+        }
+
+        //아이디를 3자 ~ 7자 사이로 입력했는지
+        let Uid = document.getElementById("uID").value;
+        if(Uid === ''){
+            alert("아이디를 입력하시오.");
+            return false;
+        }else if(Uid.length < 3 || Uid.length > 7){
+            alert("ID를 3~7자 사이로 입력하시오.");
+            return false; //조건식을 판단 할 값으로 이름을 입력 안했음을 나타내는 false를 반환
+        }
+
+        //비밀번호를 4자 ~ 10자 사이로 입력했는지,  
+        let Upwd = document.querySelector("#uPWD").value;
+        if(Upwd === '' || Upwd.length < 4 || Upwd.length > 10){
+            alert("비밀번호를 4~10자 사이로 입력하시오.");
+            return false; //조건식을 판단 할 값으로 이름을 입력 안했음을 나타내는 false를 반환
+        }
+
+        //입력한 비밀번호와 비밀번호 확인의 데이터가 같은지,
+        let Upwd_Confirm = document.querySelector("input[name = uPWD_Confirm]").value;
+        if(Upwd !== Upwd_Confirm){
+            alert("입력한 비밀번호와 일치하지 않습니다.");
+            return false; //조건식을 판단 할 값으로 이름을 입력 안했음을 나타내는 false를 반환
+        }
+
+        //직업을 선택했는지
+        let Work = document.getElementById("work").value;
+        //option들 중에 하나라도 선택하지 않았다면?
+        if(Work == "직업명"){ 
+            alert("직업을 선택하시오!!");
+            return false; //조건식을 판단 할 값으로 이름을 입력 안했음을 나타내는 false를 반환
+        }
+
+        // 성별을 선택 또는 체크 했는지,  
+        //checked속성을 호출하면 true 또는 false를 반환
+        let S1 = document.getElementById("s1").checked;//남자 라디오 버튼
+        let S2 = document.getElementById("s2").checked;//여자 라디오 버튼
+        if(!S1 && !S2){//라디오버튼이 하나라도 선택 되지 않았다면
+            alert("성별을 선택하시오!!");
+            return false; //조건식을 판단 할 값으로 이름을 입력 안했음을 나타내는 false를 반환
+        }
+
+        // 취미를 하나 이상 체크 했는지, 
+        let H1 = document.getElementById("h1").checked;
+        let H2 = document.getElementById("h2").checked;
+        let H3 = document.getElementById("h3").checked;
+        if(!H1 && !H2 && !H3){ //하나도 취미가 체크되지 않았다면?
+            alert("취미를 하나 이상 선택히시오!");
+            return false; //조건식을 판단 할 값으로 이름을 입력 안했음을 나타내는 false를 반환
+        }
+
+        // 가입동기를 입력 했는지
+        let Motivation = document.getElementsByName("motivation]")[0].value; // name 속성으로 가져오는 방법./ 배열로 받아옴
+        if(Motivation == ""){
+            alert("가입동기를 작성하시오!!");
+            return false; //조건식을 판단 할 값으로 이름을 입력 안했음을 나타내는 false를 반환
+        }
+       
+       
+	    return true; // 모든 유효성 검사를 통과 하면 true값 반환!
+
+
+      }
+
+    </script>
+    
+    
+</body>
+</html>

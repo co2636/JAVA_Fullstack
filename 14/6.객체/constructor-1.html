@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>생성자함수</title>
+</head>
+<body>
+  <script>
+    /*
+      주제. 생성자 함수(설계도)를 만들고 설계도를 이용해 객체 만들기
+
+      생성자 함수 만들기 문법
+
+        방법1. function 생성자함수명(매개변수){
+            this.키1:값1, 
+            this.키2:값2,
+            ...
+            this.메소드1 : function(){....},
+            this.메소드2 : function(){....},
+            ....
+
+        }
+
+        방법2. 표현식 문법 사용해서 생성자 함수 만들기
+
+        const 생성자함수명(매개변수) = function(){
+
+            this.키1:값1, 
+            this.키2:값2,
+            ...
+            this.메소드1 : function(){....},
+            this.메소드2 : function(){....},
+            ....
+        
+        }
+    
+    
+    
+    */
+
+    //예제 : Book() 생성자 함수 만들고 new 예약어 이용해 객체 만들기
+
+    function Book(title, pages, done=false ){
+
+      this.title = title; //"웹 표준의 정석"
+      this.pages = pages; // 648
+      this.done = done; // false
+      
+
+      // 객체의 메소드
+      this.finish = function(){
+        let str = "";
+        this.done === false ? str = "읽는중" : str = "완독";
+
+        return str;
+      }
+
+    }
+
+    //위 만들어진 생성자 함수를 호출해서 하나의 책 객체 메모리 생성
+    let book1 = new Book("웹 표준의 정석", 648, false);
+    
+    console.log(`${book1.title} - ${book1.pages}쪽 - ${book1.finish()}`);
+
+    let book2 = new Book("점프 투 파이썬", 360, true);
+
+    console.log(`${book2.title} - ${book2.pages}쪽 - ${book2.finish()}`);
+
+
+  </script>
+</body>
+</html>

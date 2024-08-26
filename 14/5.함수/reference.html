@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>참조 우선순위</title>
+</head>
+<body>
+  <script>
+    let a = 10; // 전역 스코프 영역에 만들어 놓은 전역변수 
+    const b = 20; // 전역 스코프 영역에 만들어 놓은 전역상수
+
+    function sum(){
+      
+      let a = 50; // 지역스코프 영역에 만들어 놓은 지역변수
+      const b = 70; // 지역스코프 영역에 만들어 놓은 지역상수
+
+      console.log(`함수 내부 a변수값 출력 : ${a}`); // 50
+      console.log(`함수 내부 b변수값 출력 : ${b}`); // 70
+
+    }
+
+    // 함수 호출
+    sum();
+
+
+  </script>
+</body>
+</html>

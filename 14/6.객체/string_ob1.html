@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>String객체</title>
+</head>
+<body>
+  <script>
+    // 문자열 객체를 생성하면 제공되는 메소드 및 속성들의 종류
+
+    //1. charAt(index) 메소드
+    //    - 전체 저장된 문자열에서 특정 문자의 index번호에 해당하는 문자를 반환
+
+        let str = "web he she";// 컴퓨터 RAM의 특정 영역에 "web he she" 문자열 자체 저장
+                              // 그리고 그 특정 영역의 주소가 str변수에 저장
+        //         0123456789   <- 각 문자의 위치 번호 index
+
+        //charAt메소드 호출시 index 2를 전달하면 "web he she"에서 index 2 위치에 있는 문자 b를 가져와서 반환
+        document.write(str.charAt(2), "<br>");
+        
+    //2. ⭐️ indexOf("찾을 문자") 메소드
+    //    - 전체 문자열에서 왼쪽부터 찾을 문자와 일치하는 문자를 찾아 제일 먼저 일치하는 문자의 index번호를 반환
+    //      만일 찾을 문자가 없으면 -1 반환
+
+    // let str = "web he she";
+               // 0123456789   <- 각 문자의 위치 번호 index
+        
+        // 전체 문자열 중에서 he 단어가 포함되어 있는지 알아내기 위해서 indexOf메소드 호출시 찾을 문자를 집어 넣으면
+        // 찾을 문자를 왼쪽 앞에서 부터 오른쪽 뒷쪽 방향으로 찾는데 
+        // 만약 he가 있다면? he의 첫 문자 h의 index 위치번호 4를 반환한다.
+
+        document.write(str.indexOf("he"),"<br>");
+
+    //3. lastIndexOf("찾을 문자") 메소드
+    //    - 전체 문자열에서 오른쪽에서 부터 왼쪽방향으로 찾을 문자를 찾아 제일 먼저 일치하는 문자의 index번호를 반환
+    //      만일 찾을 문자가 없으면 -1 반환
+
+        let str2 = "web he she he";
+        //          0123456789101112
+
+        document.write(str2.lastIndexOf("he"),"<br>");
+
+    //4. match("찾을 문자") 메소드
+    //   - 전체 문자열에서 왼쪽부터 찾을 문자와 일치하는 문자를 찾아 제일 먼저 찾은 문자 자체를 반환
+    //     만일 찾는 문자가 없으면 null 반환
+    
+        let str3 = "web he she he";
+        //          0123456789101112
+
+        document.write(str3.match("boy"),"<br>"); // 찾을 문자가 없음 null
+        document.write(str3.match("he"),"<br>"); // 찾을 문자가 있음 he
+    
+    //5. ⭐️ replace("바꿀문자", "새 문자") 메소드
+    //   - 전체문자열에서 왼쪽부터 "바꿀문자"와 일치하는 문자를 찾아 제일 먼저 찾은 문자를 "새 문자"로 치환한다.
+   
+
+        let str4 = "web he she";
+        // 전체 문자열 "web he she"에서 바꿀문자 "web"을 왼쪽에서 오른쪽방향으로 찾아 "html" 문자열로 치환 후
+        // 변경환 전체 문자열 "html he she"의 주소를 반환해서 str5변수에 저장
+        
+        let str5 = str4.replace("web","html");
+         //                  "바꿀문자","새 문자"
+
+        document.write(str5,"<br>"); // "html he she" 출력
+
+    //6. search("찾을 문자") 메소드
+    //    - 전체 문자열에서 왼쪽부터 오른쪽 방향으로 "찾을 문자"와 일치하는 문자를 찾아
+    //      제일 먼저 일치하는 문자의 index 위치번호를 반환
+    
+        let str6 = "web he she";
+                //  0123456789
+
+            //전체문자열에서 왼쪽부터 "he"문자와 일치하는 문자열을 찾아 찾은 문자열의 첫 문자 h의 index 위치번호 4를 반환
+            document.write(str6.search("he"),"<br>"); //4
+
+    //7. ⭐️ slice(a,b) 메소드
+    //   - 전체 문자열에서 a개의 문자를 자르고 b번째 이후에 문자를 자른 후 남음 문자열을 반환
+
+        let str7 = "Hello javascript";
+        //          12345678910111213141516 글자번호
+
+        //전체 문자열에서 3글자 "hel"까지를 자르고 
+        //7번째 index 위치 이후 8번쨰 index의 글자인 j 이후부터 "avascript" 자른 후 나머지 "lo j"문자열 반환
+        document.write(str7.slice(3, 7),"<br>"); // lo j
+
+    //8. ⭐️ substring(a,b) 메소드
+    //   - a index 위치의 문자부터 b index 위치 이전 index 구간의 문자까지의 전체 문자열을 잘라서 반환
+    
+        let str8 = "hello javascript";
+        //          0123456789
+        //                  ...-3-2-1
+
+        // 전체문자열에서 3 index 위치의 문자부터 7 index 이전 index인 6 index 위치의 문자까지의 전체 문자열을 잘라냄
+        document.write(str8.substring(3,7),"<br>"); // lo j
+
+        // 전체 문자열에서 3 index 위치 이전 index 위치인 2 index 위치에서 앞쪽 방향의 0 index위치의 문자 h까지를 잘라냄  "hel"
+        document.write(str8.substring(3, -3),"<br>"); //"hel"
+              //       str8.substring(3,  0)으로 해석 
+
+    //9. ⭐️ substr(a, 문자 개수) 메소드
+    //    - 전체 문자열에서 a index 위치의 문자부터 지정한 문자 개수만큼 문자열을 잘라서 반환
+    //      
+        let str9 = "hello javascript";
+        //          0123456789
+
+        // 3 index 위치의 문자 두 번째 l부터 시작해서 l을 포함한 2개의 문자열 "lo"를 잘라내어 반환 후 str10변수에 저장
+        let str10 = str9.substr(3, 2); // "lo"
+
+        document.write(str10,"<br>"); //lo
+
+    //10. ⭐️ split("자를 토큰 문자") 메소드
+    //     - 전체 문자열에서 지정한 "자를 토큰 문자"를 기준으로 각 문자열을 나누어 새로운 배열메모리가 생성되면서 나눈 각 문자열을 배열에 차례로 저장 후
+    //       배열메모리 주소 자체를 반환
+
+        let str11 = "webkmobilek2024";
+
+        // 전체 문자열에서 "web" "moblie" "2024" 각각 문자열을 잘라서 사용해야 한다.
+        // split 메소드 호출시 매개변수로 각 문자열 들을 자를 토큰구분문자 "k"를 전달하면
+        // "k"를 기준으로 앞뒤에 있는 "web" "mobile" "2024"를 각각 잘라내어 자동으로 새로운 배열이 생성되면서 배열에 차례로 저장시킨다.
+        // 마지막으로 새 배열 메모리의 주소를 반환
+        let arr = str11.split("k"); // ["web", "mobile", "2024"] <-- 새 배열
+
+        arr.forEach(function(value){
+
+          document.write(value,"<br>");
+       
+        });
+
+    //11. toLowerCase() 메소드
+    //    - 전체 문자열에서 영문 대문자들을 모두 소문자로 바꾼 전체 문자열 반환
+          let str12 = "ABC";
+
+          let result = str12.toLowerCase();
+
+          document.write(result, "<br>"); //abc
+
+    //12. toUpperCase() 메소드
+    //    - 전체 문자열에서 영문 소문자들을 모두 대문자로 바꾼 전체 문자열 반환
+          let str13 = "abC";
+
+          let result2 = str13.toUpperCase();
+
+          document.write(result2,"<br>"); //ABC
+
+    //13. ⭐️ length 속성
+    //     - 전체 문자열의 포함된 문자들의 총 갯수를 반환
+          let str14 = "hello welcome"; //13개의 문자
+          
+          document.write(str14.length,"<br>"); // 13
+          
+    //14. concat("새로운 문자열") 메소드
+    //    - 전체 문자열에 "새로운 문자열"을 결합한 하나의 전체 문자열을 반환
+          let str15 = "hello";
+
+          let result3 = str15.concat("web"); // "hello" + "web" -> "helloweb"
+
+          document.write(result3,"<br>"); //helloweb
+    
+    //15. charCodeAt(index) 메소드
+    //    - 전체 문자열에서 매개변수로 전달한 index 위치의 문자의 아스키코드값(10진수) 반환
+          let str16 = "ABC";
+          //           012
+
+          // 전체 문자열에서 0 index 위치에 있는 A문자 아스키코드값 65를 반환
+          let result4 = str16.charCodeAt(0);
+
+          document.write(result4,"<br>"); //65
+    
+    //16. fromCharCode(아스키코드) 메소드
+    //    - 아스키코드값에 해당하는 문자를 반환
+    //    - 문법
+    //          String.fromCharCode(아스키코드);
+    
+          // 아스키코드값 65에 대응되는 문자 A를 반환
+          let result5 = String.fromCharCode(65);
+
+          document.write(result5,"<br>"); //A
+    
+
+    //17. ⭐️ trim() 메소드
+    //     - 전체 문자열에서 앞 뒤 공백 문자열을 제거한 후  제거한 전체 문자열 반환
+    //       단, 전체 문자열에서 중간 공백이 있더라도 제거하지 않는다.
+
+          let str17 = " hell o ";
+
+          document.write("문자갯수 : "+ str17.length,"<br>"); //8
+          
+          let result6 = str17.trim(); // "hell o" 
+                                      //  123456개
+          document.write(result6,"<br>"); // hell o
+
+          document.write("문자갯수 : " + result6.length,"<br>"); // 6
+
+
+
+
+  </script>
+</body>
+</html>

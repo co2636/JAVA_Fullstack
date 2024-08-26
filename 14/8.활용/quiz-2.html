@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연습문제 2</title>  
+  <link rel="stylesheet" href="css/quiz-2.css">
+</head>
+<body>
+  <div id="noti-box"></div>
+  <button id="bttn">클릭!</button>
+
+  <script>
+    const button = document.querySelector("#bttn"); // 클릭! 버튼 부분을 선택해서 button에 저장
+    const box = document.querySelector("#noti-box"); // noti-box 부분을 선택해서 box에 저장
+
+    button.addEventListener("click", btn); // 버튼 부분에 click이벤트 등록
+
+    function btn(e){ // 이벤트처리 함수 btn() 생성
+
+      e.preventDefault(); //창을 새로 불러오는것을 막음
+
+      const box1 = document.createElement("div"); // <div>요소노드를 생성해서 box1에 저장
+      
+      box1.innerText = `알림 내용이 표시됩니다.`; // <div>`알림 내용이 표시됩니다.`</div>
+
+      box1.classList.add("noti"); // <div class="noti">`알림 내용이 표시됩니다.`</div>
+      box.appendChild(box1);
+      /*
+        <div id="noti-box">
+          <div class="noti">`알림 내용이 표시됩니다.`</div>
+        </div>
+      */
+
+      setTimeout(function(){ // 3초 후에 아래 함수부분 실행하고 함수 종료.
+
+        // box.removeChild(box1); // box1 <div>요소를 삭제함
+          box1.remove();
+
+      },3000);
+
+    }
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>else문</title>
+  </head>
+  <body>
+    <script>
+      /*
+      주제 : 사이트 방문자에게 좋아하는 숫자를 하나 입력받아
+             입력받은 숫자가 짝수인지 홀수인지 if else 조건문을 사용하여 판단하여 
+             짝수일 경우 "당신이 좋아하는 숫자는 짝수입니다."라고
+             웹브라우저 화면에 출력
+             홀수일 경우 "당신이 좋아하는 숫자는 홀수입니다."라고
+             웹브라우저 화면에 출력
+    */
+      let num = prompt(
+        "당신이 좋아하는 숫자를 입력하시오.",
+        "숫자 제발 입력바람"
+      );
+
+      // 홀수
+      if (num % 2 === 1) {
+        document.write("당신이 좋아하는 숫자는 홀수입니다.");
+      }
+
+      // 짝수
+      else {
+        document.write("당신이 좋아하는 숫자는 짝수입니다.");
+      }
+    </script>
+  </body>
+</html>

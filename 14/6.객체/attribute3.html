@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>메소드로 속성 조작3</title>
+</head>
+<body>
+  <a href="#" class="fz20">link</a>
+
+  <script>
+    const aEl = document.querySelector("a");
+    //a태그의 기존 class속성은 보존하면서 값만 삭제
+  //aEl.classList.remove("fz20"); 
+    //결과 -> <a href="#" class="">link</a>
+    
+    //a태그의 기존 class속성과 값을 같이 삭제
+  //aEl.removeAttribute("class"); 
+    //결과 -> <a href="#">link</a>
+
+    //a태그의 기존 class속성값 fz20을 보존하면서 red-color값 추가설정
+  //aEl.classList.add("red-color"); 
+    //결과 -> <a href="#" class="fz20 red-color">link</a>
+    
+    //a태그의 기존 class속성값 fz20을 보존하지 않고 red-color값을 설정
+  //aEl.setAttribute("class","red-color");
+    //결과 -> <a href="#" class="red-color">link</a>
+
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+*{
+  /* 브라우저 기본 마진 리셋 */
+    margin: 0;
+    /* 브라우저 기본 패딩 리셋 */
+    padding: 0;
+    /* 테두리까지 포함해서 박스모델 너비를 계산할 수 있도록 설정 */
+    box-sizing: border-box;
+  }
+  #container{
+    width: 100%;
+    /* 내용을 화면 가운데 배치하도록 좌우 마진을 auto로 설정 */
+    margin: 20px auto;
+  }
+  
+  #header{
+    /* 부모 div요소의 너비와 똑같게 설정 */
+    width: 100%;
+    /* header요소의 높이 설정 */
+    height: 120px;
+    /* header요소의 배경색을 진한 회색으로 설정 */
+    background-color: gray;
+  }
+  
+  #left-sidebar{
+    width: 10%; /* 사이드바 너비 */
+    height: 600px; /* 사이드바 높이 */
+    /* aside요소의 배경색을 연한회색으로 설정*/
+    background-color: #e9e9e9;
+    /* 왼쪽으로 플로팅 */
+    float: left;
+  }
+  
+  #contents{
+    width: 80%; /* 본문의 너비 */
+    height: 600px; /* 본문의 높이 */
+    background-color: #f7f7f7;
+    float: left; /* 왼쪽 플로팅 */
+  }
+
+  #right-sidebar{
+    width: 10%;
+    height: 600px;
+    background-color: pink;
+    float: left;
+  }
+  
+  #footer{
+  /* 부모 div요소의 너비와 똑같게 설정 */
+    width: 100%;
+    /* 푸터의 높이 */
+    height: 100px;
+    background-color: gray;
+    clear: left; /*플로팅 해제 */
+  }
