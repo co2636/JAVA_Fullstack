@@ -1,0 +1,11 @@
+
+// 예제 : 확장된 대입 연산자 +=
+
+public class Opr06_02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

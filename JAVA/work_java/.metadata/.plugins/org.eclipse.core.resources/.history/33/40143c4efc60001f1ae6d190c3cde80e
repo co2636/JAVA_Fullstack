@@ -1,0 +1,15 @@
+
+// 예제 : 확장된 대입 연산자 +=
+
+public class Opr06_02 {
+
+	public static void main(String[] args) {
+		
+		int a = 10;
+		
+		// a 변수에 10을 누적에서 20을 저장하고 싶다.
+		System.out.println(a + 10);  // 20 				-  	1
+		System.out.println(a);
+	}
+
+}

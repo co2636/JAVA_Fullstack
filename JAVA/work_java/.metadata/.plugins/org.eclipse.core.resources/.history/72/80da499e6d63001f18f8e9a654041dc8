@@ -1,0 +1,18 @@
+
+// 예제 :  절대값 구하기
+// 절대값을 구하는 프로그램 작성
+// -> 음수이면 부호를 변경한다.
+
+public class If01 {
+
+	public static void main(String[] args) {
+		int num;
+		num = -5;
+		if (num < 0) {
+			
+		}
+		
+
+	}
+
+}

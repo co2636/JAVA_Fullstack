@@ -1,0 +1,11 @@
+
+// 예제 : 1부터 5까지의 합 구하기
+
+public class For06 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

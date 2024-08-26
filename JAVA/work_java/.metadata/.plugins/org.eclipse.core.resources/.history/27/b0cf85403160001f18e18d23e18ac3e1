@@ -1,0 +1,21 @@
+/*
+  
+  	자료형 변환
+  	
+  	상수 역시 자료의 형태가 나뉘고 상수마다 할당되는 변수메모리의 크기가 다르다. 
+  	예를들어 123456은 int 자료형태의 정수이지만 123456L은 long 자료형태의 정수이다.
+ 
+ */
+
+
+
+// 예제 : 
+
+public class Data05 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

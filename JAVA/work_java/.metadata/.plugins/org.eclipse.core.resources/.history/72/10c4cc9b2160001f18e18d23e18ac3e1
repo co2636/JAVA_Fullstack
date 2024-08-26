@@ -1,0 +1,11 @@
+
+//예제 : 자바 문법에서 사용되는 상수의 종류 출력 해보기 
+
+public class Data01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

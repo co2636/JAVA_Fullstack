@@ -1,0 +1,16 @@
+
+// 예제 : 정수형 상수를 저장하는 변수 메모리 만들기 
+
+public class Data03 {
+
+	public static void main(String[] args) {
+		
+	// a = 1; //error - 선언된 a 변수 메모리가 없기 때문에 1을 저장할 수 없다.
+		
+		
+		int a=1;
+		System.out.println(a);
+
+	}
+
+}

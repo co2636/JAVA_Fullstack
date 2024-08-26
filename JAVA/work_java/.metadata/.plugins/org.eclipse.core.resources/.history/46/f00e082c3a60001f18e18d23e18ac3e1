@@ -1,0 +1,13 @@
+
+// 예제 : 실수 형태의 자료형 저장하기 
+
+public class Data06 {
+
+	public static void main(String[] args) {
+		
+		int a = 23.7; // 컴파일에러
+		//23.7 실수값을 23정수로 강제 형변환 하면 저장할 수 있다.
+		
+	}
+
+}

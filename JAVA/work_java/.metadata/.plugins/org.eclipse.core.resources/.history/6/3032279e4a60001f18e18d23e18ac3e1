@@ -1,0 +1,12 @@
+
+// 예제 : 문자열 상수 저장하기 
+
+public class Data08 {
+
+	public static void main(String[] args) {
+		
+		// 문자열형(String) 상수 : 
+
+	}
+
+}

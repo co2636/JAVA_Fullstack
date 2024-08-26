@@ -1,0 +1,12 @@
+
+public class BitLogicExample {
+
+	public static void main(String[] args) {
+		
+		byte receiveData = -120;
+		int unsignedInt = Byte.toUnsignedInt(receiveData);
+		System.out.println("45  25" + unsignedInt);
+		
+	}
+
+}
