@@ -1,0 +1,10 @@
+
+// 예제 : 5명의 학생의 점수를 초기값으로 갖는 배열을 선언한 후 신장의 총합을 구하고 평균을 구하는 예
+public class Arr01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

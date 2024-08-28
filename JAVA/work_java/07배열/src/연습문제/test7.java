@@ -15,9 +15,13 @@ public class test7 {
 		int sum = 0;
 		
 		//(1)
-		for(int i=0; i< arr.length; i++) {
-			sum += arr[i];
+		for(int num : arr) {
+			sum += num;
 		}
+		
+//		for(int i=0; i< arr.length; i++) {
+//			sum += arr[i];
+//		}
 		
 		System.out.println("sum="+sum);
 		

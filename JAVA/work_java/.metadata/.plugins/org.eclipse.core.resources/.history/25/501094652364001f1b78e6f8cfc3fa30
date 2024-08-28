@@ -1,0 +1,14 @@
+
+// 예제 : while 문을 이용한 무한 루프 
+
+public class F03 {
+
+	public static void main(String[] args) {
+
+		while(1) {
+			System.out.println("1");
+		}
+		
+	}
+
+}

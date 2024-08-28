@@ -30,19 +30,34 @@ public class test8 {
 		*/
 		int r,c;
 		int count = 0;
-		for(r=0; r < 4;r++) {
-			for(c=0; c< 5; c++) {
+		
+		for(r=0; r < arr.length; r++) {
+			for(c=0; c< arr[r].length; c++) {
 				total += arr[r][c];
 				count++;
 			}
 		}
 		//(2)
 		average = total / (float)count;
+		// average = total / (float)(arr.length * arr[0].length);
 		
 		
 		System.out.println("total=" + total);
 		System.out.println("average="+average);
-		
+		/*
+		 	1. int 형(4byte) 보다 크기가 작은 자료형은 int 형으로 형변환 후 에 연산을 수행한다.
+		 	
+		 			byte / short  ->  int / int  = int
+		 			
+		 	2. 두 개의  피연산자 중 자료형의 표현범위가 큰쪽에 맞춰서 형변환 된 후 연산을 수행한다. 
+		 	
+		 			int / float  ->  float / float  = float
+		 			
+		 	3. 정수형 간의 나눗셈에서 0으로 나누는것은 금지되어있다.
+		 	
+		 			5 / 0    x
+		 			10 / 0  x
+		 */
 		
 	}
 

@@ -1,0 +1,21 @@
+
+// 예제 : 반환값이 없고 여러 매개변수를 가진 메소드 
+
+public class Example4 {
+
+	// 문자열  1개 (학생 이름) 그리고 정수 1개 (나이) 를 매개변수로 전달받아
+	//"이름 : 홍길동  , 나이 : 30"
+	
+	public static void main(String[] args) {
+		
+		
+		
+	}
+		
+	public static void main(String[] args) {
+		
+		
+		
+	}
+
+}
