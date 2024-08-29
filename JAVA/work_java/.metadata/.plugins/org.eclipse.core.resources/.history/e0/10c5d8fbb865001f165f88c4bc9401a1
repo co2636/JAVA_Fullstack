@@ -1,0 +1,26 @@
+/*
+	
+	주제 : java.exe 프로그램과  jvm 의 관계
+	
+	1. java.exe 
+		- 자바 프로그램 (.class)를 실행하기 위한 실행 파일 
+		  주로 커멘드창 (cmd) 명령줄에서 사용되며 사용자가 .class 실행파일을 실행할때 사용된다.
+		 - 기능 
+		 		:	자바 바이트코드가 포함된 .class 파일이나 .jar (압축파일)  을 JVM에 로드한다.
+		 		:	JVM을 시작시키고 , JVM 내부에서 바이트코드를 실행한다.
+		 		
+	
+	
+ */
+
+
+
+public class Ex5 {
+
+	public static void main(String[] args) {
+		
+		
+		
+	}
+
+}
