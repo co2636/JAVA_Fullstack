@@ -2,7 +2,11 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="javax.swing.plaf.synth.SynthOptionPaneUI"/>
     <fullyQualifiedTypeName name="java.lang.Byte"/>
-    <fullyQualifiedTypeName name="FruitSeller"/>
     <fullyQualifiedTypeName name="Rectangle"/>
     <fullyQualifiedTypeName name="Computer"/>
+    <fullyQualifiedTypeName name="FruitSeller"/>
+    <fullyQualifiedTypeName name="FruitBuyer"/>
+    <fullyQualifiedTypeName name="Car"/>
+    <fullyQualifiedTypeName name="test.FruitSeller"/>
+    <fullyQualifiedTypeName name="Person"/>
 </qualifiedTypeNameHistroy>
