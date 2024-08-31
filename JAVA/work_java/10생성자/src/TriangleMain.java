@@ -41,12 +41,40 @@ Triangle객체생성과 동시에 밑변10.2, 높이17.w3 초기화
 
 class Triangle { // 삼각형
 	
+	double bottom;
+	double height;
+	
+	public Triangle(double bottom , double height) {
+		 this.bottom =bottom;
+		 this.height = height;
+	}
+	
+	public void setter(double bottom , double height) {
+		 this.bottom = bottom;
+		 this.height = height;
+		
+	}
+	
+	public double getArea() {
+		
+		return (bottom * height) / 2;
+		
+	}
 	
 	
 }
 
 public class TriangleMain {
 	public static void main(String[] args) {
+		
+		Triangle triangle = new Triangle(10.2 , 17.3);
+		
+		System.out.println( "삼각형의 넓이 : " + triangle.getArea());
+		
+		triangle.setter(7.5 , 9.2);
+		
+		System.out.println( "삼각형의 넓이 : " + triangle.getArea());
+		
 		
 	}
 }
