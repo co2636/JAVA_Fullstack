@@ -10,4 +10,17 @@
     <fullyQualifiedTypeName name="test.FruitSeller"/>
     <fullyQualifiedTypeName name="Person"/>
     <fullyQualifiedTypeName name="Triangle"/>
+    <fullyQualifiedTypeName name="Car2"/>
+    <fullyQualifiedTypeName name="Book"/>
+    <fullyQualifiedTypeName name="test2.Car"/>
+    <fullyQualifiedTypeName name="Calculator"/>
+    <fullyQualifiedTypeName name="Printer"/>
+    <fullyQualifiedTypeName name="ArrayUtils"/>
+    <fullyQualifiedTypeName name="UserRegistration"/>
+    <fullyQualifiedTypeName name="ch06.sec12.kumho.Tire"/>
+    <fullyQualifiedTypeName name="ch06.sec12.hankook.Tire"/>
+    <fullyQualifiedTypeName name="ch06.sec12.hankook.SnowTire"/>
+    <fullyQualifiedTypeName name="ch06.sec12.kumho.AllSeasonTire"/>
+    <fullyQualifiedTypeName name="Test"/>
+    <fullyQualifiedTypeName name="Student"/>
 </qualifiedTypeNameHistroy>
