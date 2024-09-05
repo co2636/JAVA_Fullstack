@@ -23,6 +23,18 @@ public class Sub extends Super{
 		
 		Sub s = new Sub();
 		s.print();
+		
+		/*
+		 		출력 형식 		 
+			 	num1 = 10
+				num2 = 20
+				num3 = 30
+				num4 = 40
+				num5 = 0
+
+		 */
+		
+		
 	}
 
 }

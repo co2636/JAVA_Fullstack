@@ -7152,3 +7152,31 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.
 
 !ENTRY ch.qos.logback.classic 1 0 2024-09-04 15:05:14.674
 !MESSAGE Logback config file: /Users/leejunhui/JAVA_Fullstack/JAVA/work_java/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.6.1.20240411-1122.xml
+!SESSION 2024-09-05 09:31:13.316 -----------------------------------------------
+eclipse.buildId=4.32.0.20240606-1231
+java.version=21.0.4
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/leejunhui/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/leejunhui/.eclipse_keyring
+
+!ENTRY ch.qos.logback.classic 1 0 2024-09-05 09:31:17.363
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-09-05 09:31:24.231
+!MESSAGE Logback config file: /Users/leejunhui/JAVA_Fullstack/JAVA/work_java/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2024-09-05 09:37:42.458
+!MESSAGE Internal Error
+!STACK 0
+java.io.IOException
+	at org.eclipse.jdt.internal.ui.text.JavaCodeReader.read(JavaCodeReader.java:96)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaSourceHover.removeLeadingComments(JavaSourceHover.java:821)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaSourceHover.getTrimmedSource(JavaSourceHover.java:809)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaSourceHover.getBracketHoverInfo(JavaSourceHover.java:603)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaSourceHover.getHoverInfo(JavaSourceHover.java:436)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaSourceHover.getHoverInfo2(JavaSourceHover.java:398)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)

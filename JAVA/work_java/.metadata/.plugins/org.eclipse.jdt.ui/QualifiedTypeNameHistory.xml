@@ -23,4 +23,8 @@
     <fullyQualifiedTypeName name="ch06.sec12.kumho.AllSeasonTire"/>
     <fullyQualifiedTypeName name="Test"/>
     <fullyQualifiedTypeName name="Student"/>
+    <fullyQualifiedTypeName name="PA.A"/>
+    <fullyQualifiedTypeName name="Employee"/>
+    <fullyQualifiedTypeName name="Man"/>
+    <fullyQualifiedTypeName name="Manager"/>
 </qualifiedTypeNameHistroy>
