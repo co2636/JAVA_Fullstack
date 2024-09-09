@@ -27,4 +27,17 @@
     <fullyQualifiedTypeName name="Employee"/>
     <fullyQualifiedTypeName name="Man"/>
     <fullyQualifiedTypeName name="Manager"/>
+    <fullyQualifiedTypeName name="Parent"/>
+    <fullyQualifiedTypeName name="Child"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="DObject"/>
+    <fullyQualifiedTypeName name="Circle"/>
+    <fullyQualifiedTypeName name="B1"/>
+    <fullyQualifiedTypeName name="java.nio.file.SecureDirectoryStream"/>
+    <fullyQualifiedTypeName name="A1"/>
+    <fullyQualifiedTypeName name="Alphabet"/>
+    <fullyQualifiedTypeName name="취객"/>
+    <fullyQualifiedTypeName name="해장국"/>
+    <fullyQualifiedTypeName name="뼈다귀해장국"/>
+    <fullyQualifiedTypeName name="콩나물해장국"/>
 </qualifiedTypeNameHistroy>
