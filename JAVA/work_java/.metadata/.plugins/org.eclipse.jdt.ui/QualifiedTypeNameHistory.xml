@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="Manager"/>
-    <fullyQualifiedTypeName name="Parent"/>
-    <fullyQualifiedTypeName name="Child"/>
     <fullyQualifiedTypeName name="DObject"/>
     <fullyQualifiedTypeName name="Circle"/>
     <fullyQualifiedTypeName name="B1"/>
@@ -60,4 +57,7 @@
     <fullyQualifiedTypeName name="lombok.ToString"/>
     <fullyQualifiedTypeName name="lombok.Data"/>
     <fullyQualifiedTypeName name="Member"/>
+    <fullyQualifiedTypeName name="pack3.C"/>
+    <fullyQualifiedTypeName name="pack1.A"/>
+    <fullyQualifiedTypeName name="pack2.B"/>
 </qualifiedTypeNameHistroy>

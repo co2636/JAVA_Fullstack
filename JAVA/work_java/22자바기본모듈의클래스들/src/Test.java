@@ -48,6 +48,37 @@
  				
  				롬복 다운로드 사이트 주소 : https://projectlombok.org/download
  				
+ ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 		
+ 		String 클래스
+ 		
+	 		- 문자열을 String 클래스의 객체를 생성해서 객체 메모리 내부에 저장하고 문자열을 조작할때 사용하는 클래스 
+	 		- 문자열 연산이 적고 멀티 스레드 환경일 경우
+	 		
+	 		예제1.  StringTest.Ex1.java 파일
+	 	
+	 		예제2. StringTest.Ex2.java 파일
+	 		
+	 		응용 예제3. StringTest.Ex3.java 파일
+	 		
+	 		응용 예제4. StringTest.Ex4.java 파일
+ 
+ 		StringBuffer 클래스 
+ 			
+ 			- 문자열 연산이 많고 멀티스레드 환경일 경우 객체 메모리 내부에 문자열을 저장하고 문자열 조작할때 사용되는 클래스 
+ 			
+ 			예제5. StringBufferTest.Ex1.java 파일 
+ 		
+ 		StringBuilder 클래스
+ 			
+ 			- 문자열 
+ 		
+ 		
+ 			예제6. StringBuilderTest.StringBuilderExample.java 파일 
+ 		
+ 		
+ 		
+ 		
  
  */
 public class Test {
