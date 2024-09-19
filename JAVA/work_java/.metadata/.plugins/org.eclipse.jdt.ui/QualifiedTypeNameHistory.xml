@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="DObject"/>
-    <fullyQualifiedTypeName name="Circle"/>
-    <fullyQualifiedTypeName name="B1"/>
     <fullyQualifiedTypeName name="java.nio.file.SecureDirectoryStream"/>
     <fullyQualifiedTypeName name="A1"/>
     <fullyQualifiedTypeName name="Alphabet"/>
@@ -60,4 +57,7 @@
     <fullyQualifiedTypeName name="pack3.C"/>
     <fullyQualifiedTypeName name="pack1.A"/>
     <fullyQualifiedTypeName name="pack2.B"/>
+    <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
+    <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+    <fullyQualifiedTypeName name="StringBuilderTest.StringBuilderExample"/>
 </qualifiedTypeNameHistroy>
