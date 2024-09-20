@@ -21,5 +21,9 @@ public class Collections02 {
 		System.out.println(list.toString()); // [하나, 2, 3.42, 넷, five, 6]
 
 		// 결론 : 출력결과 HashSet 배열과 달리 ArrayList 배열에는 add 메소드를 호출하여 추가한 순서대로 객체(요소)들이 저장된 것을 확인 할  수 있다.
+		
+		
+		
+		
 	}
 }
