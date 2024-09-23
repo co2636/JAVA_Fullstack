@@ -1,22 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.nio.file.SecureDirectoryStream"/>
-    <fullyQualifiedTypeName name="A1"/>
-    <fullyQualifiedTypeName name="Alphabet"/>
-    <fullyQualifiedTypeName name="취객"/>
-    <fullyQualifiedTypeName name="해장국"/>
-    <fullyQualifiedTypeName name="뼈다귀해장국"/>
-    <fullyQualifiedTypeName name="콩나물해장국"/>
-    <fullyQualifiedTypeName name="Phone"/>
-    <fullyQualifiedTypeName name="SmartPhone"/>
-    <fullyQualifiedTypeName name="Dog"/>
-    <fullyQualifiedTypeName name="Cat"/>
-    <fullyQualifiedTypeName name="AbstractMethod"/>
-    <fullyQualifiedTypeName name="GeneralBoard"/>
-    <fullyQualifiedTypeName name="NoticeBoard"/>
-    <fullyQualifiedTypeName name="ch08.sec02.RemoteControl"/>
-    <fullyQualifiedTypeName name="ch08.sec07.ServiceImpl"/>
-    <fullyQualifiedTypeName name="ch08.sec07.Service"/>
     <fullyQualifiedTypeName name="java.lang.Readable"/>
     <fullyQualifiedTypeName name="ch08.sec08.RemoteControl"/>
     <fullyQualifiedTypeName name="ch08.sec08.Searchable"/>
@@ -60,4 +43,21 @@
     <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
     <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
     <fullyQualifiedTypeName name="StringBuilderTest.StringBuilderExample"/>
+    <fullyQualifiedTypeName name="포장클래스.IntWrapper"/>
+    <fullyQualifiedTypeName name="java.lang.Boolean"/>
+    <fullyQualifiedTypeName name="포장클래스.BooleanWrapper"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="java.util.Vector"/>
+    <fullyQualifiedTypeName name="java.util.Stack"/>
+    <fullyQualifiedTypeName name="java.util.Queue"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.LinkedList"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="java.util.Hashtable"/>
+    <fullyQualifiedTypeName name="java.util.Enumeration"/>
 </qualifiedTypeNameHistroy>

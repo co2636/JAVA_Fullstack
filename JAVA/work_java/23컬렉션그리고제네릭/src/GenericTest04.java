@@ -163,7 +163,7 @@ public class GenericTest04 {
 		
 		obj03.setValue("이해할수 있다.");
 		
-		System.out.println("되도렬 받는 데이터 : " +   obj03.getValue());
+		System.out.println("되돌려 받는 데이터 : " +   obj03.getValue());
 		
 		
 		
